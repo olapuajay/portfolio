@@ -26,7 +26,7 @@ const Navbar = () => {
       {/* Desktop Navigation */}
       <ul className='hidden md:flex'>
         {navItems.map(item => (
-          <li key={item.id} className='px-4 py-2 rounded-xl m-2 cursor-pointer duration-300 text-gray-500 hover:text-white'>
+          <li key={item.id} className='px-4 py-2 rounded-xl m-2 cursor-pointer duration-300 text-[#9CA3AF] hover:text-white'>
             <a href={`#${item.id}`}>{item.text}</a>
           </li>
         ))}
