@@ -3,8 +3,8 @@ import Profile from '../assets/profile.png'
 
 function Home({ name, description }) {
   return (
-    <div className='flex flex-col-reverse md:flex-row w-full justify-center items-start p-10 md:p-15 h-screen'>
-      <div className='md:w-3/4 md:pt-10'>
+    <div className='flex flex-col-reverse md:flex-row w-full justify-center items-start px-8 pb-10 md:p-15 md:h-[calc(100vh-4rem)]'>
+      <div className='md:w-3/4 md:pt-20'>
         <h1 className='text-3xl md:text-5xl font-bold text-white '>
           Hi, I'm {name}👋
         </h1>
@@ -12,7 +12,7 @@ function Home({ name, description }) {
           {description}
         </p>
         <p className='text-[#9CA3AF] text-sm md:text-xl mt-2 md:mt-2'>
-          <i className='fas fa-map-marker-alt text-sm md:text-xl mt-2 md:mt-2 mr-2'></i>
+          <i className='fas fa-map-marker-alt text-sm md:text-lg mt-2 md:mt-2 mr-2'></i>
           Peddapalli, India
         </p>
         <div className='flex justify-items-start space-x-2 items-center mt-4 md:mt-6'>
@@ -23,7 +23,7 @@ function Home({ name, description }) {
           <i className='fab fa-linkedin text-3xl text-[#9CA3AF] hover:text-[#0A66C2] duration-300 cursor-pointer'>          </i>
         </div>
       </div>
-      <div className='md:w-1/4 md:pt-10 pt-10'>
+      <div className='md:w-1/4 md:pt-10 pt-0'>
         <img src={Profile} alt="Profile Image" />
       </div>
     </div>
