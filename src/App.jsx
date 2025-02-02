@@ -1,10 +1,11 @@
 import './App.css'
+import Navbar from './components/Navbar'
 
 function App() {
 
   return (
-    <div className='text-center bg-gray-100 h-screen flex items-center justify-center'>
-      Hello
+    <div className="App">
+      <Navbar />
     </div>
   )
 }
