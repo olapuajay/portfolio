@@ -33,7 +33,7 @@ const Navbar = () => {
       </ul>
       <div className='line h-6 w-0.5 rounded-3xl bg-[#9CA3AF] mx-2 hidden md:flex'></div>
       <button className='bg-[#6366F1] py-2 px-4 rounded-xl text-white text-center font-semibold hover:bg-[#637bf1] duration-300 min-w-35 cursor-pointer hidden md:flex'>
-         Download CV 
+        Download CV
       </button>
 
       {/* Mobile Navigation Icon */}
