@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import resume from '../assets/resume.pdf';
 
 const Navbar = () => {
   // State to manage the navbar's visibility
@@ -32,7 +33,7 @@ const Navbar = () => {
         ))}
       </ul>
       <div className='line h-6 w-0.5 rounded-3xl bg-[#9CA3AF] mx-2 hidden md:flex'></div>
-      <a href='../assets/resume.pdf' className='bg-[#6366F1] py-2 px-4 rounded-xl text-white text-center font-semibold hover:bg-[#637bf1] duration-300 min-w-35 cursor-pointer hidden md:flex'>
+      <a href={resume} target='_blank' rel='noopener noreferrer' className='bg-[#6366F1] py-2 px-4 rounded-xl text-white text-center font-semibold hover:bg-[#637bf1] duration-300 min-w-35 cursor-pointer hidden md:flex'>
         Download CV
       </a>
 

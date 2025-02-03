@@ -28,16 +28,16 @@ function Projects() {
     },
   ]
   return (
-    <section id='projects' className='w-full py-5 px-4 bg-gray-900 text-white'>
-      <h2 className="text-xl md:text-3xl font-bold text-center mb-5 ">My Projects</h2>
-      <p className='text-[#9CA3AF] text-center text-sm md:text-lg'>Here are some of the projects I've worked on recently.</p>
+    <section id='projects' className='w-full py-5 px-4 bg-gray-900 text-white' data-aos="fade-in">
+      <h2 className="text-xl md:text-3xl font-bold text-center mb-5 " data-as="fade-down">My Projects</h2>
+      <p className='text-[#9CA3AF] text-center text-sm md:text-lg' data-aos="fade-up">Here are some of the projects I've worked on recently.</p>
       <div>
         {projectList.slice().reverse().map(project => (
-          <div key={project.name} className='flex flex-col md:flex-row justify-center items-center mb-8 mt-4 bg-gray-800 p-4 rounded-2xl shadow-lg'>
+          <div key={project.name} className='flex flex-col md:flex-row justify-center items-center mb-8 mt-4 bg-gray-800 p-4 rounded-2xl shadow-lg' data-aos="fade-up">
             <div key={project.image} className='w-full md:w-1/2 flex justify-center'>
               <img src={project.image} alt={`Image of project1 - ${project.name}`} className='w-full max-w-lg rounded-xl shadow-lg hover:scale-105 duration-300' />
             </div>
-            <div key={project.name} className='w-full md:w-1/2 text-left md:text-left'>
+            <div key={project.name} className='w-full md:w-1/2 text-left md:text-left' data-aos="fade-left">
               <h3 className='text-white text-lg md:text-xl font-bold mt-4'> {project.name} </h3>
               <p className='text-[#9CA3AF] text-sm md:text-lg mt-2 mb-2'> {project.description} </p>
               <div className='flex flex-wrap'>

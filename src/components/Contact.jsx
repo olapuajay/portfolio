@@ -2,16 +2,16 @@ import React from 'react'
 
 function Contact({email, socialLinks}) {
   return (
-    <section id='contact' className='w-full py-5 px-4'>
-      <h2 className="text-xl md:text-3xl text-white font-bold text-center mb-5 ">Let's Connect</h2>
-      <p className='text-[#9CA3AF] text-center text-sm md:text-lg'>I'm always open to new opportunities and collaborations. Feel free to reach out to me!</p>
-      <p className='md:text-[#9CA3AF] text-[#6366F1] text-center text-lg md:text-3xl mt-4'>
+    <section id='contact' className='w-full py-5 px-4' data-aos="fade-in">
+      <h2 className="text-xl md:text-3xl text-white font-bold text-center mb-5 " data-aos="fade-down">Let's Connect</h2>
+      <p className='text-[#9CA3AF] text-center text-sm md:text-lg' data-aos="fade-up">I'm always open to new opportunities and collaborations. Feel free to reach out to me!</p>
+      <p className='md:text-[#9CA3AF] text-[#6366F1] text-center text-lg md:text-3xl mt-4' data-aos="fade-up">
         <i className='fas fa-envelope mr-2'></i>
         <a href={`mailto:${email}`} className='hover:text-[#6366F1] duration-300 cursor-pointer'>
           {email}
         </a>
       </p>
-      <p className='text-[#9CA3AF] text-center text-sm md:text-lg mt-2'>
+      <p className='text-[#9CA3AF] text-center text-sm md:text-lg mt-2' data-aos="fade-up">
         You can also find me on these platforms.
       </p>
       <div className='flex justify-center items-center gap-4 mt-4 md:mt-6'>

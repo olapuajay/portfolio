@@ -22,12 +22,12 @@ function Skills() {
     {name: 'Figma', image: figma},
   ]
   return (
-    <section id='skills' className='text-center w-full py-5 px-4'>
-      <h2 className="text-xl md:text-3xl font-bold text-center text-white mb-5 ">Skills</h2>
-      <p className='text-[#9CA3AF] text-sm md:text-lg'>The Skills, Tools, and Technologies I'm familiar with</p>
-      <div className='grid grid-cols-3 gap-4 md:grid-cols-6 md:gap-6 w-full  px-8 py-10 '>
+    <section id='skills' className='text-center w-full py-5 px-4' data-aos="fade-in">
+      <h2 className="text-xl md:text-3xl font-bold text-center text-white mb-5 " data-aos="fade-down">Skills</h2>
+      <p className='text-[#9CA3AF] text-sm md:text-lg' data-aos="fade-up">The Skills, Tools, and Technologies I'm familiar with</p>
+      <div className='grid grid-cols-3 gap-4 md:grid-cols-6 md:gap-6 w-full px-8 py-10 '>
         {Skills.map(skill => (
-          <div key={skill.name} className='flex flex-col items-center'>
+          <div key={skill.name} className='flex flex-col items-center' data-aos="zoom-in">
             <img src={skill.image} alt={`Image of ${skill.name}`} className='w-14 h-14 md:w-25 md:h-25 object-contain hover:scale-110 duration-300 cursor-pointer' />
             <p className='text-[#9CA3AF] text-sm md:text-lg mt-2'>{skill.name}</p>
           </div>

@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import './App.css'
 import About from './components/About'
 import Contact from './components/Contact'
@@ -20,6 +21,15 @@ function App() {
       { name: 'figma', url: 'https://www.figma.com/@olapuajay'},
     ],
   }
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      disable: 'mobile',
+
+    })
+  }, [])
 
   return (
     <div className="App">
