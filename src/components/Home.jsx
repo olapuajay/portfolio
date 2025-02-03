@@ -26,7 +26,7 @@ function Home({ name, description, location }) {
         </div>
       </div>
       <div className='md:w-1/4 md:pt-10 pt-0 group'>
-        <img src={Profile} alt="Profile Image" className='hover:scale-110 duration-300 group-hover:filter group-hover:drop-shadow-[0_0_2em_#646cffaa]' />
+        <img src={Profile} alt="Profile Image" className='hover:scale-110 duration-300 md:group-hover:filter md:group-hover:drop-shadow-[0_0_2em_#646cffaa]' />
       </div>
     </section>
   )
