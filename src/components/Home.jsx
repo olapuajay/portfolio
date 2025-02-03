@@ -12,7 +12,7 @@ function Home({ name, description, location, socialLinks }) {
           {description}
         </p>
         <p className='text-[#9CA3AF] text-sm md:text-xl mt-2 md:mt-2'>
-          <i className='fas fa-map-marker-alt text-sm md:text-lg mt-2 md:mt-2 mr-2 text-[#0A66C2]'></i>
+          <i className='fas fa-map-marker-alt text-sm md:text-lg mt-2 md:mt-2 mr-2 text-[#6366F1]'></i>
           {location}
         </p>
         <div className='flex justify-items-start space-x-4 items-center mt-4 md:mt-6'>

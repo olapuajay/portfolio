@@ -17,7 +17,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='bg-transparent flex justify-between items-center h-16 max-w-[1240px] mx-auto px-4 text-white'>
+    <div className='bg-transparent md:backdrop-blur-2xl flex justify-between items-center h-16 max-w-[1240px] mx-auto px-4 text-white md:fixed w-full z-50 '>
       {/* Logo */}
       <h1 className='w-full md:text-3xl text-2xl font-bold text-[#6366F1]'> 
         <a href="#home" className='cursor-pointer'> {"<A />"} </a>

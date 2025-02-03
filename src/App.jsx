@@ -4,6 +4,7 @@ import Contact from './components/Contact'
 import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Projects from './components/Projects'
+import Sidebar from './components/Sidebar'
 import Skills from './components/Skills'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <Sidebar email={siteProps.email} socialLinks={siteProps.socialLinks} />
       <Home name={siteProps.name} description={siteProps.description} location={siteProps.location} socialLinks={siteProps.socialLinks} />
       <About />
       <Skills />
