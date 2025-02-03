@@ -1,5 +1,6 @@
 import './App.css'
 import About from './components/About'
+import Contact from './components/Contact'
 import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Projects from './components/Projects'
@@ -14,6 +15,7 @@ function App() {
     socialLinks: [
       { name: 'github', url: 'https://github.com/olapuajay'},
       { name: 'linkedin', url: 'https://www.linkedin.com/in/olapuajay/'},
+      { name: 'figma', url: 'https://www.figma.com/@olapuajay'},
     ],
   }
 
@@ -24,6 +26,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
+      <Contact email={siteProps.email} socialLinks={siteProps.socialLinks} />
     </div>
   )
 }

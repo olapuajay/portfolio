@@ -35,7 +35,7 @@ function Projects() {
         {projectList.slice().reverse().map(project => (
           <div key={project.name} className='flex flex-col md:flex-row justify-center items-center mb-8 mt-4 bg-gray-800 p-4 rounded-2xl shadow-lg'>
             <div key={project.image} className='w-full md:w-1/2 flex justify-center'>
-              <img src={project.image} alt={`Image of project1 - ${project.name}`} className='w-full max-w-lg rounded-xl shadow-lg' />
+              <img src={project.image} alt={`Image of project1 - ${project.name}`} className='w-full max-w-lg rounded-xl shadow-lg hover:scale-105 duration-300' />
             </div>
             <div key={project.name} className='w-full md:w-1/2 text-left md:text-left'>
               <h3 className='text-white text-lg md:text-xl font-bold mt-4'> {project.name} </h3>

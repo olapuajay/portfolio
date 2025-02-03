@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 const Navbar = () => {
   // State to manage the navbar's visibility
@@ -12,7 +11,6 @@ const Navbar = () => {
 
   // Array containing navigation items with their corresponding section IDs
   const navItems = [
-    { id: 'home', text: 'Home' },
     { id: 'about', text: 'About' },
     { id: 'projects', text: 'Projects' },
     { id: 'contact', text: 'Contact' },
@@ -21,7 +19,9 @@ const Navbar = () => {
   return (
     <div className='bg-transparent flex justify-between items-center h-16 max-w-[1240px] mx-auto px-4 text-white'>
       {/* Logo */}
-      <h1 className='w-full text-3xl font-bold text-[#6366F1]'> {"<A />"} </h1>
+      <h1 className='w-full md:text-3xl text-2xl font-bold text-[#6366F1]'> 
+        <a href="#home" className='cursor-pointer'> {"<A />"} </a>
+      </h1>
 
       {/* Desktop Navigation */}
       <ul className='hidden md:flex'>
@@ -38,7 +38,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation Icon */}
       <div onClick={handleNav} className='block md:hidden'>
-        {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+        {nav ? <i className='fas fa-times text-xl'></i> : <i className='fas fa-bars text-xl'></i>}
       </div>
 
       {/* Mobile Navigation Menu */}
@@ -50,7 +50,11 @@ const Navbar = () => {
         }
       >
         {/* Mobile Logo */}
-        <h1 className='w-full text-3xl font-bold text-[#6366F1] m-4'> {"<A />"} </h1>
+        <h1 className='w-full text-2xl font-bold text-[#6366F1] m-4'> 
+          <a href="#home">
+            {"<A />"} 
+          </a>
+        </h1>
 
         {/* Mobile Navigation Items */}
         {navItems.map(item => (
