@@ -17,7 +17,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='bg-transparent md:backdrop-blur-2xl flex justify-between items-center h-16 max-w-[1240px] mx-auto px-4 text-white md:fixed w-full z-50 '>
+    <div className='bg-transparent md:backdrop-blur-2xl flex justify-between items-center h-16 w-full fixed top-0 left-0 z-50 px-4 text-white'>
       {/* Logo */}
       <h1 className='w-full md:text-3xl text-2xl font-bold text-[#6366F1]'> 
         <a href="#home" className='cursor-pointer'> {"<A />"} </a>
@@ -32,9 +32,9 @@ const Navbar = () => {
         ))}
       </ul>
       <div className='line h-6 w-0.5 rounded-3xl bg-[#9CA3AF] mx-2 hidden md:flex'></div>
-      <button className='bg-[#6366F1] py-2 px-4 rounded-xl text-white text-center font-semibold hover:bg-[#637bf1] duration-300 min-w-35 cursor-pointer hidden md:flex'>
+      <a href='../assets/resume.pdf' className='bg-[#6366F1] py-2 px-4 rounded-xl text-white text-center font-semibold hover:bg-[#637bf1] duration-300 min-w-35 cursor-pointer hidden md:flex'>
         Download CV
-      </button>
+      </a>
 
       {/* Mobile Navigation Icon */}
       <div onClick={handleNav} className='block md:hidden'>

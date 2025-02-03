@@ -1,6 +1,7 @@
 import './App.css'
 import About from './components/About'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Projects from './components/Projects'
@@ -24,11 +25,12 @@ function App() {
     <div className="App">
       <Navbar />
       <Sidebar email={siteProps.email} socialLinks={siteProps.socialLinks} />
-      <Home name={siteProps.name} description={siteProps.description} location={siteProps.location} socialLinks={siteProps.socialLinks} />
+      <Home name={siteProps.name} description={siteProps.description} location={siteProps.location} />
       <About />
       <Skills />
       <Projects />
       <Contact email={siteProps.email} socialLinks={siteProps.socialLinks} />
+      <Footer />
     </div>
   )
 }

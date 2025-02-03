@@ -22,7 +22,7 @@ function Skills() {
     {name: 'Figma', image: figma},
   ]
   return (
-    <div className='text-center w-full py-5 px-4'>
+    <section id='skills' className='text-center w-full py-5 px-4'>
       <h2 className="text-xl md:text-3xl font-bold text-center text-white mb-5 ">Skills</h2>
       <p className='text-[#9CA3AF] text-sm md:text-lg'>The Skills, Tools, and Technologies I'm familiar with</p>
       <div className='grid grid-cols-3 gap-4 md:grid-cols-6 md:gap-6 w-full  px-8 py-10 '>
@@ -33,7 +33,7 @@ function Skills() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   )
 }
 
