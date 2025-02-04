@@ -1,7 +1,22 @@
 import React from 'react'
-import project1Img from '../assets/projects/project1.png'
-import project2Img from '../assets/projects/project2.png'
-import project3Img from '../assets/projects/project3.png'
+import project1Img_1 from '../assets/projects/project1_1.png'
+import project1Img_2 from '../assets/projects/project1_2.png'
+import project1Img_3 from '../assets/projects/project1_3.png'
+import project1Img_4 from '../assets/projects/project1_4.png'
+import project1Img_5 from '../assets/projects/project1_5.png'
+import project2Img_1 from '../assets/projects/project2_1.png'
+import project2Img_2 from '../assets/projects/project2_2.png'
+import project2Img_3 from '../assets/projects/project2_3.png'
+import project2Img_4 from '../assets/projects/project2_4.png'
+import project2Img_5 from '../assets/projects/project2_5.png'
+import project2Img_6 from '../assets/projects/project2_6.png'
+import project2Img_7 from '../assets/projects/project2_7.png'
+import project3Img_1 from '../assets/projects/project3_1.png'
+import project3Img_2 from '../assets/projects/project3_2.png'
+import project3Img_3 from '../assets/projects/project3_3.png'
+import project3Img_4 from '../assets/projects/project3_4.png'
+import project3Img_5 from '../assets/projects/project3_5.png'
+import ProjectCarousel from './ProjectCarousel'
 
 function Projects() {
   const projectList = [
@@ -9,21 +24,21 @@ function Projects() {
       name: 'CricTribute', 
       description: 'A simple and responsive cricket based webpage', 
       techstack: ['HTML', 'CSS', 'Javascript', 'Bootstrap', 'JQuery'], 
-      image: project1Img, 
+      images: [project1Img_1, project1Img_2, project1Img_3, project1Img_4, project1Img_5],
       url: 'https://olapuajay.github.io/CricTriute/',
     },
     {
       name: 'Restaurant Website', 
       description: 'A simple, responsive restaurant website built using React and Bootstrap. This project includes features such as a homepage, menu, contact form, and about section. Designed with clean UI, the site is mobile-friendly and optimized for performance.', 
       techstack: ['React', 'Bootstrap', 'HTML', 'CSS'], 
-      image: project2Img, 
+      images: [project2Img_1, project2Img_2, project2Img_3, project2Img_4, project2Img_5, project2Img_6, project2Img_7],
       url: 'https://bistrowave-restaurant-web.netlify.app/',
     },
     {
       name: 'Film Vault', 
       description: 'A movie management app built with Vite and React, featuring: Home page with a banner and trending movies. Add to Watchlist functionality, with data stored in localStorage. Watchlist page with details (name, rating, popularity, genre) and delete option. Search and genre sorting for the watchlist.', 
       techstack: ['React', 'Vite', 'Axios', 'API', 'Bootstrap', 'HTML', 'CSS'], 
-      image: project3Img, 
+      images: [project3Img_1, project3Img_2, project3Img_3, project3Img_4, project3Img_5],
       url: 'https://filmvault-vite.netlify.app/',
     },
   ]
@@ -33,10 +48,13 @@ function Projects() {
       <p className='text-[#9CA3AF] text-center text-sm md:text-lg' data-aos="fade-up">Here are some of the projects I've worked on recently.</p>
       <div>
         {projectList.slice().reverse().map(project => (
-          <div key={project.name} className='flex flex-col md:flex-row justify-center items-center mb-8 mt-4 bg-gray-800 p-4 rounded-2xl shadow-lg' data-aos="fade-up">
-            <div key={project.image} className='w-full md:w-1/2 flex justify-center'>
-              <img src={project.image} alt={`Image of project1 - ${project.name}`} className='w-full max-w-lg rounded-xl shadow-lg hover:scale-105 duration-300' />
+          <div key={project.name} className='flex flex-col md:flex-row justify-center items-center my-4 bg-gray-800 px-2 rounded-2xl shadow-lg' data-aos="fade-up">
+            <div key={project.images} className='w-full md:w-1/2 flex justify-center'>
+              <div className='w-full max-w-lg rounded-xl shadow-lg'>
+                <ProjectCarousel images={project.images} />
+              </div>
             </div>
+
             <div key={project.name} className='w-full md:w-1/2 text-left md:text-left' data-aos="fade-left">
               <h3 className='text-white text-lg md:text-xl font-bold mt-4'> {project.name} </h3>
               <p className='text-[#9CA3AF] text-sm md:text-lg mt-2 mb-2'> {project.description} </p>
