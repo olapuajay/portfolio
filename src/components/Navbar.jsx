@@ -2,15 +2,12 @@ import React, { useState } from 'react';
 import resume from '../assets/resume.pdf';
 
 const Navbar = () => {
-  // State to manage the navbar's visibility
   const [nav, setNav] = useState(false);
 
-  // Toggle function to handle the navbar's display
   const handleNav = () => {
     setNav(!nav);
   };
 
-  // Array containing navigation items with their corresponding section IDs
   const navItems = [
     { id: 'about', text: 'About' },
     { id: 'projects', text: 'Projects' },

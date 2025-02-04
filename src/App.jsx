@@ -25,10 +25,13 @@ function App() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: true,
+      once: false,
       disable: 'mobile',
-
     })
+    window.addEventListener('scroll', AOS.refresh);
+    return () => {
+      window.removeEventListener('scroll', AOS.refresh);
+    }
   }, [])
 
   return (
