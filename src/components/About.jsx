@@ -11,10 +11,10 @@ const About = () => {
   ]
   
   return (
-    <section id="about" className="w-full py-10 px-4 bg-gray-900 text-white"
+    <section id="about" className="w-full py-5 px-4 bg-gray-900 text-white"
      data-aos="fade-in">
-      <h2 className="text-xl md:text-3xl font-bold text-center mb-5 ">About Me</h2>
-      <div className="max-w-[1240px] mx-auto flex flex-col md:flex-row items-center gap-10">
+      <h2 className="text-xl md:text-3xl font-bold text-center mb-4 ">About Me</h2>
+      <div className="max-w-[1240px] mx-auto flex flex-col md:flex-row items-center md:gap-10 gap-5">
         <div className="w-full md:w-1/2 flex justify-center my-auto" data-aos="fade-right">
           <img
             src={aboutImg}

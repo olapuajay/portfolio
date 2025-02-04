@@ -11,7 +11,7 @@ function ProjectCarousel({ images }) {
 
   return (
     <div className='relative w-full'>
-      <div className='relative h-56 overflow-hidden rounded-lg md:h-96'>
+      <div className='relative h-40 overflow-hidden rounded-lg md:h-85'>
         {images.map((image, index) => (
           <div key={index} className={`absolute w-full h-full flex items-center justify-center transition-opacity duration-700 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}>
             <img src={image} alt="..." className='block w-full rounded-lg' />

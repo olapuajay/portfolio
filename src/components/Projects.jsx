@@ -23,14 +23,14 @@ function Projects() {
     {
       name: 'CricTribute', 
       description: 'A simple and responsive cricket based webpage', 
-      techstack: ['HTML', 'CSS', 'Javascript', 'Bootstrap', 'JQuery'], 
+      techstack: ['HTML', 'CSS', 'Javascript','JQuery', 'Bootstrap'], 
       images: [project1Img_1, project1Img_2, project1Img_3, project1Img_4, project1Img_5],
       url: 'https://olapuajay.github.io/CricTriute/',
     },
     {
       name: 'Restaurant Website', 
       description: 'A simple, responsive restaurant website built using React and Bootstrap. This project includes features such as a homepage, menu, contact form, and about section. Designed with clean UI, the site is mobile-friendly and optimized for performance.', 
-      techstack: ['React', 'Bootstrap', 'HTML', 'CSS'], 
+      techstack: ['React', 'Bootstrap', 'Web3Forms', 'HTML', 'CSS'], 
       images: [project2Img_1, project2Img_2, project2Img_3, project2Img_4, project2Img_5, project2Img_6, project2Img_7],
       url: 'https://bistrowave-restaurant-web.netlify.app/',
     },
@@ -44,19 +44,19 @@ function Projects() {
   ]
   return (
     <section id='projects' className='w-full py-5 px-4 bg-gray-900 text-white' data-aos="fade-in">
-      <h2 className="text-xl md:text-3xl font-bold text-center mb-5 " data-as="fade-down">My Projects</h2>
+      <h2 className="text-xl md:text-3xl font-bold text-center md:mb-4 mb-2 " data-as="fade-down">My Projects</h2>
       <p className='text-[#9CA3AF] text-center text-sm md:text-lg' data-aos="fade-up">Here are some of the projects I've worked on recently.</p>
       <div>
         {projectList.slice().reverse().map(project => (
-          <div key={project.name} className='flex flex-col md:flex-row justify-center items-center my-4 bg-gray-800 px-2 rounded-2xl shadow-lg' data-aos="fade-up">
+          <div key={project.name} className='flex flex-col md:flex-row justify-center items-center my-4 bg-gray-800 px-2 py-0 rounded-2xl shadow-lg' data-aos="fade-up">
             <div key={project.images} className='w-full md:w-1/2 flex justify-center'>
               <div className='w-full max-w-lg rounded-xl shadow-lg'>
                 <ProjectCarousel images={project.images} />
               </div>
             </div>
 
-            <div key={project.name} className='w-full md:w-1/2 text-left md:text-left' data-aos="fade-left">
-              <h3 className='text-white text-lg md:text-xl font-bold mt-4'> {project.name} </h3>
+            <div key={project.name} className='w-full md:w-1/2 text-left md:text-left mb-2' data-aos="fade-left">
+              <h3 className='text-white text-lg md:text-xl font-bold mt-2'> {project.name} </h3>
               <p className='text-[#9CA3AF] text-sm md:text-lg mt-2 mb-2'> {project.description} </p>
               <div className='flex flex-wrap'>
                 {project.techstack.map(tech => (
@@ -64,7 +64,7 @@ function Projects() {
                 ))}
               </div>
               <div className='mt-4'>
-                <a href={project.url} target='_blank' rel='noreferrer noopener' className='text-[#9CA3AF] bg-gray-800 rounded-lg py-2 px-2 text-lg md:text-xl mr-2 cursor-pointer hover:text-white hover:bg-black duration-300'>
+                <a href={project.url} target='_blank' rel='noreferrer noopener' className='text-[#9CA3AF] md:bg-gray-800 bg-black rounded-xl md:rounded-lg py-1 md:py-2 px-2 text-lg md:text-xl mr-2 cursor-pointer hover:text-white hover:bg-black duration-300'>
                   <i className="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
               </div>
