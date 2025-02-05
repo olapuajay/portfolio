@@ -14,8 +14,8 @@ const About = () => {
     <section id="about" className="w-full py-5 px-4 bg-gray-900 text-white"
      data-aos="fade-in">
       <h2 className="text-xl md:text-3xl font-bold text-center mb-4 ">About Me</h2>
-      <div className="max-w-[1240px] mx-auto flex flex-col md:flex-row items-center md:gap-10 gap-5">
-        <div className="w-full md:w-1/2 flex justify-center my-auto" data-aos="fade-right">
+      <div className="max-w-[1240px] mx-auto flex flex-col lg:flex-row items-center lg:gap-10 gap-5 md:px-4">
+        <div className="w-full lg:w-1/2 flex justify-center my-auto" data-aos="fade-right">
           <img
             src={aboutImg}
             alt="About Image"
@@ -23,7 +23,7 @@ const About = () => {
           />
         </div>
 
-        <div className="w-full md:w-1/2 text-left md:text-left">
+        <div className="w-full lg:w-1/2 text-left md:text-left">
           <p className="text-[#9CA3AF] text-sm md:text-lg" data-aos="fade-left">
             I'm a passionate frontend developer with a keen eye for UI/UX design and a love for crafting smooth, responsive, and visually engaging web applications. My expertise lies in React.js, but I also enjoy exploring backend technologies to create seamless full-stack solutions.
           </p>

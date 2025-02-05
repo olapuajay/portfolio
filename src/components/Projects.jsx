@@ -48,14 +48,14 @@ function Projects() {
       <p className='text-[#9CA3AF] text-center text-sm md:text-lg' data-aos="fade-up">Here are some of the projects I've worked on recently.</p>
       <div>
         {projectList.slice().reverse().map(project => (
-          <div key={project.name} className='flex flex-col md:flex-row justify-center items-center my-4 bg-gray-800 px-2 py-0 rounded-2xl shadow-lg' data-aos="fade-up">
-            <div key={project.images} className='w-full md:w-1/2 flex justify-center'>
+          <div key={project.name} className='flex flex-col lg:flex-row justify-center items-center my-4 bg-gray-800 px-2 py-0 rounded-2xl shadow-lg' data-aos="fade-up">
+            <div key={project.images} className='w-full lg:w-1/2 flex justify-center'>
               <div className='w-full max-w-lg rounded-xl shadow-lg'>
                 <ProjectCarousel images={project.images} />
               </div>
             </div>
 
-            <div key={project.name} className='w-full md:w-1/2 text-left md:text-left mb-2' data-aos="fade-left">
+            <div key={project.name} className='w-full lg:w-1/2 text-left md:text-left mb-2 md:px-2 md:pb-2' data-aos="fade-left">
               <h3 className='text-white text-lg md:text-xl font-bold mt-2'> {project.name} </h3>
               <p className='text-[#9CA3AF] text-sm md:text-lg mt-2 mb-2'> {project.description} </p>
               <div className='flex flex-wrap'>

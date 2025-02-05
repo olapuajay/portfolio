@@ -4,14 +4,14 @@ import Profile from '../assets/profile.png'
 function Home({ name, description, location }) {
   return (
     <section id='home' className='flex flex-col-reverse md:flex-row w-full justify-center items-start px-8 pb-10 md:p-15 md:h-[calc(100vh-4rem)] mt-20' data-aos='fade-in'>
-      <div className='md:w-3/4 md:pt-20' data-aos='fade-right'>
-        <h1 className='text-3xl md:text-5xl font-bold text-white '>
+      <div className='md:w-3/4 lg:pt-20 md:pt-10' data-aos='fade-right'>
+        <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-white '>
           Hi, I'm {name}👋
         </h1>
         <p className='text-[#9CA3AF] text-sm md:text-lg mt-4 md:mt-6'>
           {description}
         </p>
-        <p className='text-[#9CA3AF] text-sm md:text-xl mt-2 md:mt-2'>
+        <p className='text-[#9CA3AF] text-sm lg:text-xl md:text-lg mt-2 md:mt-2'>
           <i className='fas fa-map-marker-alt text-sm md:text-lg mt-2 md:mt-2 mr-2 text-[#6366F1]'></i>
           {location}
         </p>
