@@ -30,14 +30,14 @@ function Projects() {
     {
       name: 'Restaurant Website', 
       description: 'A simple, responsive restaurant website built using React and Bootstrap. This project includes features such as a homepage, menu, contact form, and about section. Designed with clean UI, the site is mobile-friendly and optimized for performance.', 
-      techstack: ['React', 'Bootstrap', 'Web3Forms', 'HTML', 'CSS'], 
+      techstack: ['React', 'Routing', 'Bootstrap', 'Web3Forms', 'HTML', 'CSS'], 
       images: [project2Img_1, project2Img_2, project2Img_3, project2Img_4, project2Img_5, project2Img_6, project2Img_7],
       url: 'https://bistrowave-restaurant-web.netlify.app/',
     },
     {
       name: 'Film Vault', 
       description: 'A movie management app built with Vite and React, featuring: Home page with a banner and trending movies. Add to Watchlist functionality, with data stored in localStorage. Watchlist page with details (name, rating, popularity, genre) and delete option. Search and genre sorting for the watchlist.', 
-      techstack: ['React', 'Vite', 'Axios', 'API', 'Bootstrap', 'HTML', 'CSS'], 
+      techstack: ['React', 'Vite', 'Axios', 'API', 'Routing', 'Bootstrap', 'HTML', 'CSS'], 
       images: [project3Img_1, project3Img_2, project3Img_3, project3Img_4, project3Img_5],
       url: 'https://filmvault-vite.netlify.app/',
     },
@@ -54,7 +54,6 @@ function Projects() {
                 <ProjectCarousel images={project.images} />
               </div>
             </div>
-
             <div key={project.name} className='w-full lg:w-1/2 text-left md:text-left mb-2 md:px-2 md:pb-2' data-aos="fade-left">
               <h3 className='text-white text-lg md:text-xl font-bold mt-2'> {project.name} </h3>
               <p className='text-[#9CA3AF] text-sm md:text-lg mt-2 mb-2'> {project.description} </p>

@@ -22,14 +22,17 @@ function Contact({email, socialLinks}) {
             You can also find me on these platforms.
           </p>
           <div className='flex justify-center items-center gap-4 mt-4 md:mt-6'>
-            <a href={socialLinks.find(link => link.name === 'github').url}>
+            <a href={socialLinks.find(link => link.name === 'github').url} target='_blank' rel='noreferrer noopener'>
               <i className='fab fa-github text-3xl lg:text-[#9CA3AF] text-white hover:text-white hover:scale-110 duration-300 cursor-pointer'></i>
             </a>
-            <a href={socialLinks.find(link => link.name === 'linkedin').url}>
+            <a href={socialLinks.find(link => link.name === 'linkedin').url} target='_blank' rel='noreferrer noopener'>
               <i className='fab fa-linkedin text-3xl lg:text-[#9CA3AF] text-[#0A66C2] hover:text-[#0A66C2] hover:scale-110 duration-300 cursor-pointer'></i>
             </a>
-            <a href={socialLinks.find(link => link.name === 'figma').url}>
+            <a href={socialLinks.find(link => link.name === 'figma').url} target='_blank' rel='noreferrer noopener'>
               <i className='fab fa-figma text-3xl lg:text-[#9CA3AF] text-red-800 hover:text-red-600 hover:scale-110 duration-300 cursor-pointer'></i>
+            </a>
+            <a href={socialLinks.find(link => link.name === 'twitter').url} target='_blank' rel='noreferrer noopener'>
+              <i className='fab fa-twitter text-3xl lg:text-[#9CA3AF] text-[#1DA1F2] hover:text-[#1DA1F2] hover:scale-110 duration-300 cursor-pointer'></i>
             </a>
           </div>
         </div>
