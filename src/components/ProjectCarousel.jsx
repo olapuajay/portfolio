@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 function ProjectCarousel({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -8,6 +8,12 @@ function ProjectCarousel({ images }) {
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)
   }
+
+  useEffect(() => {
+    setInterval(() => {
+      nextSlide()
+    }, 3000)
+  }, [])
 
   return (
     <div className='relative w-full'>
@@ -25,8 +31,6 @@ function ProjectCarousel({ images }) {
       <button onClick={nextSlide} className='absolute top-1/2 right-0 transform -translate-y-1/2 md:px-4 md:py-2 px-2 py-1 bg-gray-800 opacity-70 hover:opacity-100 duration-300 rounded-full text-white cursor-pointer'>
         <i className='fas fa-chevron-right'></i>
       </button>
-      {/* Button Indicators */}
-
     </div>
   )
 }

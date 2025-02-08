@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import './App.css'
 import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -12,7 +11,7 @@ import Skills from './components/Skills'
 function App() {
   const siteProps = {
     name: 'Ajay',
-    description: 'I\'m a Web Developer specializing in JavaScript(React.js and Node.js) with a passion for building intuitive, responsive, and visually engaging web experiences. I focus on crafting seamless UI/UX designs that are fast, accessible, and user-friendly.',
+    description: 'I\'m a Web Developer specializing in JavaScript with a passion for building intuitive, responsive, and visually engaging web experiences. I focus on crafting seamless UI/UX designs that are fast, accessible, and user-friendly.',
     email: 'olapuajay@gmail.com',
     location: 'Peddapalli, India',
     socialLinks: [
