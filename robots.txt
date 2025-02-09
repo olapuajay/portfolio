@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://olapuajay.github.io/portfolio/sitemap.xml
