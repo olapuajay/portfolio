@@ -28,6 +28,9 @@ function Contact({email, socialLinks}) {
             <a href={socialLinks.find(link => link.name === 'linkedin').url} target='_blank' rel='noreferrer noopener'>
               <i className='fab fa-linkedin text-3xl lg:text-[#9CA3AF] text-[#0A66C2] hover:text-[#0A66C2] hover:scale-110 duration-300 cursor-pointer'></i>
             </a>
+            <a href={socialLinks.find(link => link.name === 'leetcode').url} target='_blank' rel='noreferrer noopener'>
+              <i className='fas fa-code text-3xl lg:text-[#9CA3AF] text-[#F89F1B] hover:text-[#F89F1B] hover:scale-110 duration-300 cursor-pointer'></i>
+            </a>
             <a href={socialLinks.find(link => link.name === 'figma').url} target='_blank' rel='noreferrer noopener'>
               <i className='fab fa-figma text-3xl lg:text-[#9CA3AF] text-red-800 hover:text-red-600 hover:scale-110 duration-300 cursor-pointer'></i>
             </a>

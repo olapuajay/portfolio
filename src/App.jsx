@@ -19,6 +19,7 @@ function App() {
       { name: 'linkedin', url: 'https://www.linkedin.com/in/olapuajay/'},
       { name: 'figma', url: 'https://www.figma.com/@olapuajay'},
       { name: 'twitter', url: 'https://x.com/_ajaypatel_18'},
+      { name: 'leetcode', url: 'https://leetcode.com/u/olapuajay/' },
     ],
   }
 
