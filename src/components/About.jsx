@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import aboutImg from '../assets/about-img.jpeg'
 
 const About = () => {
+  const [isImgLoaded, setIsImgLoaded] = useState(false)
   const quickBits = [
     'Pursuing a Bachelor’s degree in CSE',
     'Currently learning backend technologies with javascript',
@@ -16,10 +17,15 @@ const About = () => {
       <h2 className="text-xl md:text-3xl font-bold text-center mb-4 ">About Me</h2>
       <div className="max-w-[1240px] mx-auto flex flex-col lg:flex-row items-center lg:gap-10 gap-5 md:px-4">
         <div className="w-full lg:w-1/2 flex justify-center my-auto" data-aos="fade-right">
+          {!isImgLoaded && (
+            <div className='w-60 h-40 md:w-96 md:h-56 bg-gray-700 animate-pulse rounded-lg overflow-x-hidden'>
+            </div>
+          )}
           <img
             src={aboutImg}
             alt="About Image"
-            className="w-full max-w-lg rounded-2xl shadow-lg"
+            className={`w-full max-w-lg rounded-2xl shadow-lg ${isImgLoaded ? 'block' : 'hidden'}`}
+            onLoad={() => setIsImgLoaded(true)}
           />
         </div>
 

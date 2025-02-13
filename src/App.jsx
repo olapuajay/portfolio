@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -9,6 +9,7 @@ import Sidebar from './components/Sidebar'
 import Skills from './components/Skills'
 
 function App() {
+  const [isPageLoaded, setIsPageLoaded] = useState(false)
   const siteProps = {
     name: 'Ajay',
     description: 'I\'m a Web Developer specializing in JavaScript with a passion for building intuitive, responsive, and visually engaging web experiences. I focus on crafting seamless UI/UX designs that are fast, accessible, and user-friendly.',
@@ -37,14 +38,23 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
-      <Sidebar email={siteProps.email} socialLinks={siteProps.socialLinks} />
-      <Home name={siteProps.name} description={siteProps.description} location={siteProps.location} />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact email={siteProps.email} socialLinks={siteProps.socialLinks} />
-      <Footer name={siteProps.name} />
+      {!isPageLoaded && (
+        <div className='fixed top-0 left-0 z-50 w-full h-full flex items-center justify-center bg-black opacity-90'>
+          <div className='animate-pulse'>
+            <i className='fas fa-circle-notch text-5xl text-[#6366F1] animate-spin'></i>
+          </div>
+        </div>
+      )}
+      <div className={`${isPageLoaded ? 'block' : 'hidden'}`} onLoad={() => setIsPageLoaded(true)}>
+        <Navbar />
+        <Sidebar email={siteProps.email} socialLinks={siteProps.socialLinks} />
+        <Home name={siteProps.name} description={siteProps.description} location={siteProps.location} />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact email={siteProps.email} socialLinks={siteProps.socialLinks} />
+        <Footer name={siteProps.name} />
+      </div>
     </div>
   )
 }

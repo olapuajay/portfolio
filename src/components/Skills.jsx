@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import javascript from '../assets/skills/javascript.png'
 import react from '../assets/skills/react.png'
 import nodejs from '../assets/skills/nodejs.png'
@@ -10,6 +10,7 @@ import git from '../assets/skills/git.png'
 import figma from '../assets/skills/figma.png'
 
 function Skills() {
+  const [isLoaded, setIsLoaded] = useState(false)
   const Skills = [
     {name: 'Javascript', image: javascript},
     {name: 'React', image: react},
@@ -28,8 +29,14 @@ function Skills() {
       <div className='grid grid-cols-3 gap-4 md:grid-cols-6 md:gap-6 w-full px-4 py-6 '>
         {Skills.map(skill => (
           <div key={skill.name} className='flex flex-col items-center' data-aos="zoom-in">
-            <img src={skill.image} alt={`Image of ${skill.name}`} className='w-14 h-14 md:w-25 md:h-25 object-contain hover:scale-110 duration-300 cursor-pointer' />
-            <p className='text-[#9CA3AF] text-sm md:text-lg mt-2'>{skill.name}</p>
+            {!isLoaded && (
+              <div className='w-14 h-14 md:w-25 md:h-25 bg-gray-700 animate-pulse rounded-lg'></div>
+            )}
+            <img src={skill.image} alt={`Image of ${skill.name}`} className={`${isLoaded ? 'block' : 'hidden'} w-14 h-14 md:w-25 md:h-25 object-contain hover:scale-110 duration-300 cursor-pointer`} onLoad={() => setIsLoaded(true)} />
+            {!isLoaded && (
+              <div className='w-36 h-6 bg-gray-700 animate-pulse rounded-lg'></div>
+            )}
+            <p className={`${isLoaded ? 'block' : 'hidden'} text-[#9CA3AF] text-sm md:text-lg mt-2`} onLoad={() => setIsLoaded(true)}>{skill.name}</p>
           </div>
         ))}
       </div>

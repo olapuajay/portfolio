@@ -10,4 +10,5 @@ html {
 body {
   background: #030712;
   overflow-x: hidden;
+  user-select: none;
 }

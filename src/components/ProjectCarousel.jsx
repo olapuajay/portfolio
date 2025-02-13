@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 
 function ProjectCarousel({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [isLoaded, setIsLoaded] = useState(false)
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % images.length)
   }
@@ -20,7 +21,10 @@ function ProjectCarousel({ images }) {
       <div className='relative h-40 overflow-hidden rounded-lg md:h-85'>
         {images.map((image, index) => (
           <div key={index} className={`absolute w-full h-full flex items-center justify-center transition-opacity duration-700 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'}`}>
-            <img src={image} alt="..." className='block w-full rounded-lg' />
+            {!isLoaded && (
+              <div className='w-full h-full bg-gray-700 animate-pulse rounded-lg'></div>
+            )}
+            <img src={image} alt="..." className={`${isLoaded ? 'block' : 'hidden'} w-full rounded-lg`} onLoad={() => setIsLoaded(true)} />
           </div>
         ))}
       </div>
