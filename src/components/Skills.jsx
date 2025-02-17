@@ -32,7 +32,7 @@ function Skills() {
             {!isLoaded && (
               <div className='w-14 h-14 md:w-25 md:h-25 bg-gray-700 animate-pulse rounded-lg'></div>
             )}
-            <img src={skill.image} alt={`Image of ${skill.name}`} className={`${isLoaded ? 'block' : 'hidden'} w-14 h-14 md:w-25 md:h-25 object-contain hover:scale-110 duration-300 cursor-pointer`} onLoad={() => setIsLoaded(true)} />
+            <img src={skill.image} alt={`Image of ${skill.name}`} className={`${isLoaded ? 'block' : 'hidden'} w-14 h-14 md:w-25 md:h-25 object-contain hover:scale-110 duration-300 cursor-pointer`} onLoad={() => setIsLoaded(true)} onContextMenu={(e) => e.preventDefault()} draggable="false" />
             {!isLoaded && (
               <div className='w-36 h-6 bg-gray-700 animate-pulse rounded-lg'></div>
             )}

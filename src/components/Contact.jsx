@@ -11,7 +11,7 @@ function Contact({email, socialLinks}) {
           {!isImgLoaded && (
             <div className='w-70 h-40 md:w-96 md:h-56 bg-gray-700 animate-pulse rounded-lg overflow-x-hidden'></div>
           )}
-          <img src={ContactImg} alt="Contact Image" className={`${isImgLoaded ? 'block' : 'hidden'} md:w-full md:h-full w-70 h-40 max-w-lg rounded-2xl shadow-lg brightness-90`} onLoad={() => setIsImgLoaded(true)} />
+          <img src={ContactImg} alt="Contact Image" className={`${isImgLoaded ? 'block' : 'hidden'} md:w-full md:h-full w-70 h-40 max-w-lg rounded-2xl shadow-lg brightness-90`} onLoad={() => setIsImgLoaded(true)} onContextMenu={(e) => e.preventDefault()} draggable="false" />
         </div>
         <div className="w-full md:w-1/2 text-left md:text-left">
           <p className='text-[#9CA3AF] text-center text-sm md:text-lg' data-aos="fade-up">I'm always open to new opportunities and collaborations.</p>

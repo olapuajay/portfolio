@@ -26,6 +26,8 @@ const About = () => {
             alt="About Image"
             className={`w-full max-w-lg rounded-2xl shadow-lg ${isImgLoaded ? 'block' : 'hidden'}`}
             onLoad={() => setIsImgLoaded(true)}
+            onContextMenu={(e) => e.preventDefault()}
+            draggable="false"
           />
         </div>
 

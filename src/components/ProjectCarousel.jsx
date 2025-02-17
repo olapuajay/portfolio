@@ -24,7 +24,7 @@ function ProjectCarousel({ images }) {
             {!isLoaded && (
               <div className='w-full h-full bg-gray-700 animate-pulse rounded-lg'></div>
             )}
-            <img src={image} alt="..." className={`${isLoaded ? 'block' : 'hidden'} w-full rounded-lg`} onLoad={() => setIsLoaded(true)} />
+            <img src={image} alt="..." className={`${isLoaded ? 'block' : 'hidden'} w-full rounded-lg`} onLoad={() => setIsLoaded(true)} onContextMenu={(e) => e.preventDefault()} draggable="false" />
           </div>
         ))}
       </div>

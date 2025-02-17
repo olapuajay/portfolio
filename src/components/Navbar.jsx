@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import resume from '../assets/resume.pdf';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [showNavbar, setShowNavBar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const handleNav = () => {
     setNav(!nav);
@@ -14,8 +16,26 @@ const Navbar = () => {
     { id: 'contact', text: 'Contact' },
   ];
 
+  const controlNavbar = () => {
+    if(typeof window !== 'undefined') {
+      if(window.scrollY > lastScrollY) {
+        setShowNavBar(false);
+      } else {
+        setShowNavBar(true);
+      }
+      setLastScrollY(window.scrollY);
+    }
+  };
+
+  useEffect(() => {
+    if(typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar);
+      return () => window.removeEventListener('scroll', controlNavbar);
+    }
+  }, [lastScrollY]);
+
   return (
-    <div className='md:bg-transparent bg-[#030712]  md:backdrop-blur-2xl flex justify-between items-center h-16 w-full fixed top-0 left-0 z-50 px-4 text-white'>
+    <div className={`md:bg-transparent bg-[#030712]  md:backdrop-blur-2xl flex justify-between items-center h-16 w-full fixed top-0 left-0 z-50 px-4 text-white transition-transform duration-300 ${showNavbar ? 'translate-y-0' : '-translate-y-full'}`}>
       {/* Logo */}
       <h1 className='w-full md:text-3xl text-2xl font-bold text-[#6366F1]'> 
         <a href="#home" className='cursor-pointer'> {"<A />"} </a>

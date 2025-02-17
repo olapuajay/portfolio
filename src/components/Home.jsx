@@ -29,7 +29,7 @@ function Home({ name, description, location }) {
         {!isProfileLoaded && (
           <div className='w-40 h-40 md:w-56 md:h-56 bg-gray-700 animate-pulse rounded-full'></div>
         )}
-        <img src={Profile} alt="Profile Image" className={`hover:scale-110 duration-300 md:group-hover:filter md:group-hover:drop-shadow-[0_0_2em_#646cffaa] ${isProfileLoaded ? 'block' : 'hidden'}`} onLoad={() => setIsProfileLoaded(true)} />
+        <img src={Profile} alt="Profile Image" className={`hover:scale-110 duration-300 md:group-hover:filter md:group-hover:drop-shadow-[0_0_2em_#646cffaa] ${isProfileLoaded ? 'block' : 'hidden'}`} onLoad={() => setIsProfileLoaded(true)} onContextMenu={(e) => e.preventDefault()} draggable="false" />
       </div>
     </section>
   )
