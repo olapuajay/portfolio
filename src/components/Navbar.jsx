@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import resume from '../assets/resume.pdf';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -44,16 +45,14 @@ const Navbar = () => {
       {/* Desktop Navigation */}
       <ul className='hidden md:flex'>
         {navItems.map(item => (
-          <li key={item.id} className='px-4 py-2 rounded-xl m-2 cursor-pointer duration-300 text-[#9CA3AF] hover:text-white'>
+          <li key={item.id} className='px-4 py-2 rounded-xl m-2 cursor-pointer duration-300 text-[var(--secondary-text-color)] hover:text-[var(--text-color)]'>
             <a href={`#${item.id}`}>{item.text}</a>
           </li>
         ))}
       </ul>
       <div className='line h-6 w-0.5 rounded-3xl bg-[#9CA3AF] mx-2 hidden md:flex'></div>
-      <button className='p-1.5 rounded-lg text-xl hover:bg-[#9CA3AF] mr-2 duration-300 cursor-pointer hidden md:flex'>
-        🌞
-      </button>
-      <a href={resume} target='_blank' rel='noopener noreferrer' className='bg-[#6366F1] py-2 px-4 rounded-xl text-white text-center font-semibold hover:bg-[#637bf1] duration-300 min-w-35 cursor-pointer hidden md:flex'>
+      <ThemeToggle />
+      <a href={resume} target='_blank' rel='noopener noreferrer' className='bg-[#6366F1] py-2 px-4 rounded-xl text-[var(--text-color)] text-center font-semibold hover:bg-[#637bf1] duration-300 min-w-35 cursor-pointer hidden md:flex'>
         Download CV
       </a>
 

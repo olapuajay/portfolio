@@ -24,8 +24,8 @@ function Skills() {
   ]
   return (
     <section id='skills' className='text-center w-full py-5 px-4' data-aos="fade-in">
-      <h2 className="text-xl md:text-3xl font-bold text-center text-white md:mb-4 mb-2 " data-aos="fade-down">Skills</h2>
-      <p className='text-[#9CA3AF] text-sm md:text-lg' data-aos="fade-up">The Skills, Tools, and Technologies I'm familiar with</p>
+      <h2 className="text-xl md:text-3xl font-bold text-center text-[var(--text-color)] md:mb-4 mb-2 " data-aos="fade-down">Skills</h2>
+      <p className='text-[var(--secondary-text-color)] text-sm md:text-lg' data-aos="fade-up">The Skills, Tools, and Technologies I'm familiar with</p>
       <div className='grid grid-cols-3 gap-4 md:grid-cols-6 md:gap-6 w-full px-4 py-6 '>
         {Skills.map(skill => (
           <div key={skill.name} className='flex flex-col items-center' data-aos="zoom-in">
@@ -36,7 +36,7 @@ function Skills() {
             {!isLoaded && (
               <div className='w-36 h-6 bg-gray-700 animate-pulse rounded-lg'></div>
             )}
-            <p className={`${isLoaded ? 'block' : 'hidden'} text-[#9CA3AF] text-sm md:text-lg mt-2`} onLoad={() => setIsLoaded(true)}>{skill.name}</p>
+            <p className={`${isLoaded ? 'block' : 'hidden'} text-[var(--secondary-text-color)] text-sm md:text-lg mt-2`} onLoad={() => setIsLoaded(true)}>{skill.name}</p>
           </div>
         ))}
       </div>
