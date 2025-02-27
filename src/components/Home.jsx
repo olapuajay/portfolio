@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Profile from '../assets/profile.png'
+import { MapPin } from 'lucide-react'
 
 function Home({ name, description, location }) {
   const [isProfileLoaded, setIsProfileLoaded] = useState(false)
@@ -12,8 +13,8 @@ function Home({ name, description, location }) {
         <p className='text-[var(--secondary-text-color)] text-sm md:text-lg mt-4 md:mt-6'>
           {description}
         </p>
-        <p className='text-[var(--secondary-text-color)] text-sm lg:text-xl md:text-lg mt-2 md:mt-2'>
-          <i className='fas fa-map-marker-alt text-sm md:text-lg mt-2 md:mt-2 mr-2 text-[#6366F1]'></i>
+        <p className='text-[var(--secondary-text-color)] text-sm lg:text-xl md:text-lg mt-2 md:mt-2 flex items-center'>
+          <MapPin className='mr-2 text-[#6366F1]' />
           {location}
         </p>
         <div className='flex justify-items-start space-x-4 items-center mt-4 md:mt-6' data-aos='fade-up'>
