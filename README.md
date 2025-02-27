@@ -21,7 +21,7 @@ A **personal portfolio website** built using **Vite + React + Tailwind CSS**, sh
 | **Vite** | Fast frontend tooling |
 | **Tailwind CSS** | Utility-first CSS framework |
 | **AOS (Animate on Scroll)** | Smooth animations |
-| **Font Awesome** | Icons library |
+| **Font Awesome & react-lucide** | Icons library |
 
 ---
 
