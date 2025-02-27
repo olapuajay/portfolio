@@ -27,7 +27,7 @@ function Contact({email, socialLinks}) {
           </p>
           <div className='flex justify-center items-center gap-4 mt-4 md:mt-6'>
             <a href={socialLinks.find(link => link.name === 'github').url} target='_blank' rel='noreferrer noopener'>
-              <i className='fab fa-github text-3xl lg:text-[var(--secondary-text-color)] text-white hover:text-[var(--hover-color)] hover:scale-110 duration-300 cursor-pointer'></i>
+              <i className='fab fa-github text-3xl lg:text-[var(--secondary-text-color)] text-[var(--text-color)] hover:text-[var(--hover-color)] hover:scale-110 duration-300 cursor-pointer'></i>
             </a>
             <a href={socialLinks.find(link => link.name === 'linkedin').url} target='_blank' rel='noreferrer noopener'>
               <i className='fab fa-linkedin text-3xl lg:text-[var(--secondary-text-color)] text-[#0A66C2] hover:text-[#0A66C2] hover:scale-110 duration-300 cursor-pointer'></i>

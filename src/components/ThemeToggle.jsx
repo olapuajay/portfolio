@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import { SunIcon, MoonIcon } from 'lucide-react';
 
 function ThemeToggle() {
   const [isDarkmode, setIsDarkmode] = useState(true);
@@ -14,8 +15,8 @@ function ThemeToggle() {
     localStorage.setItem('theme', newTheme);
   }
   return (
-    <button onClick={toggleTheme} className='p-1.5 rounded-lg text-xl mr-2 hover:bg-[#9CA3AF] duration-300 cursor-pointer'>
-      {isDarkmode ? '🌞' : '🌙'}
+    <button onClick={toggleTheme} className='p-1.5 rounded-lg text-xl mr-2 text-[var(--secondary-text-color)] hover:bg-[#9CA3AF] hover:text-[var(--text-color)] duration-300 cursor-pointer'>
+      {isDarkmode ? <SunIcon /> : <MoonIcon />} 
     </button>
   )
 }

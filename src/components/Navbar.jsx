@@ -36,7 +36,7 @@ const Navbar = () => {
   }, [lastScrollY]);
 
   return (
-    <div className={`md:bg-transparent bg-[#030712] md:backdrop-blur-2xl flex justify-between items-center h-16 w-full fixed top-0 left-0 z-50 px-4 text-white transition-transform duration-300 ${showNavbar ? 'md:translate-y-0' : 'md:-translate-y-full'}`}>
+    <div className={`md:bg-transparent bg-[var(--background-color)] md:backdrop-blur-2xl flex justify-between items-center h-16 w-full fixed top-0 left-0 z-50 px-4 text-white transition-transform duration-300 ${showNavbar ? 'md:translate-y-0' : 'md:-translate-y-full'}`}>
       {/* Logo */}
       <h1 className='w-full md:text-3xl text-2xl font-bold text-[#6366F1]'> 
         <a href="#home" className='cursor-pointer'> {"<A />"} </a>
@@ -57,7 +57,7 @@ const Navbar = () => {
       </a>
 
       {/* Mobile Navigation Icon */}
-      <div onClick={handleNav} className='block md:hidden'>
+      <div onClick={handleNav} className='block md:hidden text-[var(--secondary-text-color)]'>
         {nav ? <i className='fas fa-times text-xl'></i> : <i className='fas fa-bars text-xl'></i>}
       </div>
 
@@ -83,7 +83,6 @@ const Navbar = () => {
           </li>
         ))}
         <div className='flex flex-col justify-center items-center'>
-          <button className='bg-[#9CA3AF] py-2 px-3 rounded-xl font-bold text-center'>Switch Theme 🌞</button>
           <button className='bg-[#6366F1] py-2 px-4 my-2 mx-3.5 rounded-xl font-bold text-white w-40 cursor-pointer'>
           Download CV 
           </button>

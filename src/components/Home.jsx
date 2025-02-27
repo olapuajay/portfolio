@@ -17,10 +17,10 @@ function Home({ name, description, location }) {
           {location}
         </p>
         <div className='flex justify-items-start space-x-4 items-center mt-4 md:mt-6' data-aos='fade-up'>
-          <button className='bg-[#6366F1] py-2 px-4 rounded-xl text-[var(--text-color)] text-center font-semibold hover:bg-[#637bf1] duration-300 min-w-35 md:text-lg text-sm cursor-pointer'>
+          <button className='bg-[#6366F1] py-2 px-4 rounded-xl text-white text-center font-semibold hover:bg-[#637bf1] duration-300 min-w-35 md:text-lg text-sm cursor-pointer'>
             <a href="#skills">My Skills</a>
           </button>
-          <button className='py-2 px-4 rounded-xl text-[#6366F1] border-1 text-center font-semibold hover:bg-[#637bf1] hover:text-[var(--text-color)] hover:border-0 duration-300 min-w-30 md:text-lg text-sm cursor-pointer'>
+          <button className='py-2 px-4 rounded-xl text-[#6366F1] border-1 text-center font-semibold hover:bg-[#637bf1] hover:text-white hover:border-0 duration-300 min-w-30 md:text-lg text-sm cursor-pointer'>
             <a href="#contact">Contact Me</a>
           </button>
         </div>

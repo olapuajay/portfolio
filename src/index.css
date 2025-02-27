@@ -8,13 +8,15 @@ html {
   scroll-behavior: smooth;
 }
 :root {
-  --background-color: #F9FAFB;
+  --background-color: #FFFFFF;
+  --secondary-bg-color: #F0F8FF;
   --text-color: #111827;
   --secondary-text-color: #4B5563;
   --hover-color: #030712;
 }
 [data-theme="dark"] {
   --background-color: #030712;
+  --secondary-bg-color: #101828;
   --text-color: #ffffff;
   --secondary-text-color: #9CA3AF;
   --hover-color: #ffffff;
