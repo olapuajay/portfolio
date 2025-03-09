@@ -1,14 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import resume from '../assets/resume.pdf';
 import ThemeToggle from './ThemeToggle';
+import { TbLayoutNavbarExpandFilled } from 'react-icons/tb';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [showNavbar, setShowNavBar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const navRef = useRef(null);
 
   const handleNav = () => {
     setNav(!nav);
+  };
+
+  const handleClickOutside = (e) => {
+    if(navRef.current && !navRef.current.contains(e.target)) {
+      setNav(false);
+    }
   };
 
   const navItems = [
@@ -31,12 +39,16 @@ const Navbar = () => {
   useEffect(() => {
     if(typeof window !== 'undefined') {
       window.addEventListener('scroll', controlNavbar);
-      return () => window.removeEventListener('scroll', controlNavbar);
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+        document.removeEventListener('mousedown', handleClickOutside)
+      }
     }
   }, [lastScrollY]);
 
   return (
-    <div className={`md:bg-transparent bg-[var(--background-color)] md:backdrop-blur-2xl flex justify-between items-center h-16 w-full fixed top-0 left-0 z-50 px-4 text-white transition-transform duration-300 ${showNavbar ? 'md:translate-y-0' : 'md:-translate-y-full'}`}>
+    <div className={`md:bg-transparent bg-[var(--background-color)] md:backdrop-blur-2xl flex justify-between items-center md:h-16 w-full h-14 fixed top-0 left-0 z-50 px-4 text-white transition-transform duration-300 ${showNavbar ? 'md:translate-y-0' : 'md:-translate-y-full'}`}>
       {/* Logo */}
       <h1 className='w-full md:text-3xl text-2xl font-bold text-[#6366F1]'> 
         <a href="#home" className='cursor-pointer'> {"<A />"} </a>
@@ -63,29 +75,30 @@ const Navbar = () => {
 
       {/* Mobile Navigation Menu */}
       <ul
+      ref={navRef}
         className={
           nav
-            ? 'fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500'
+            ? 'fixed md:hidden left-0 top-0 w-[60%] h-full border-r border-r-[#9CA3AF] bg-[var(--background-color)] ease-in-out duration-500'
             : 'ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%]'
         }
       >
         {/* Mobile Logo */}
         <h1 className='w-full text-2xl font-bold text-[#6366F1] m-4'> 
-          <a href="#home">
+          <a href="#home" onClick={() => setNav(false)}>
             {"<A />"} 
           </a>
         </h1>
 
         {/* Mobile Navigation Items */}
         {navItems.map(item => (
-          <li key={item.id} className='p-4 rounded-xl hover:bg-[#6366F1] duration-300 hover:text-black cursor-pointer border-gray-600'>
+          <li key={item.id} className='p-4 rounded-xl hover:bg-[#6366F1] duration-300 hover:text-black cursor-pointer border-gray-600 text-[var(--text-color)]'>
             <a href={`#${item.id}`} onClick={() => setNav(false)}>{item.text}</a>
           </li>
         ))}
         <div className='flex flex-col justify-center items-center'>
-          <button className='bg-[#6366F1] py-2 px-4 my-2 mx-3.5 rounded-xl font-bold text-white w-40 cursor-pointer'>
-          Download CV 
-          </button>
+          <a href={resume} target='_blank' rel='noopener noreferrer' onClick={() => setNav(false)} className='bg-[#6366F1] py-2 px-4 my-2 mx-3.5 rounded-xl font-bold text-white w-40 cursor-pointer'>
+            Download CV 
+          </a>
         </div>
       </ul>
     </div>
