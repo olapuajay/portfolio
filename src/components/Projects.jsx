@@ -16,6 +16,7 @@ import project3Img_2 from '../assets/projects/project3_2.png'
 import project3Img_3 from '../assets/projects/project3_3.png'
 import project3Img_4 from '../assets/projects/project3_4.png'
 import project3Img_5 from '../assets/projects/project3_5.png'
+import project3Img_6 from '../assets/projects/project3_6.png'
 import ProjectCarousel from './ProjectCarousel'
 
 function Projects() {
@@ -38,7 +39,7 @@ function Projects() {
       name: 'Film Vault', 
       description: 'A movie management app built with Vite and React, featuring: Home page with a banner and trending movies. Add to Watchlist functionality, with data stored in localStorage. Watchlist page with details (name, rating, popularity, genre) and delete option. Search and genre sorting for the watchlist.', 
       techstack: ['React', 'Vite', 'Axios', 'API', 'Routing', 'Bootstrap', 'HTML', 'CSS'], 
-      images: [project3Img_1, project3Img_2, project3Img_3, project3Img_4, project3Img_5],
+      images: [project3Img_1, project3Img_2, project3Img_3, project3Img_4, project3Img_5, project3Img_6],
       url: 'https://filmvault-vite.netlify.app/',
     },
   ]
