@@ -64,7 +64,7 @@ function Projects() {
                 ))}
               </div>
               <div className='mt-4'>
-                <a href={project.url} target='_blank' rel='noreferrer noopener' className='text-white md:bg-gray-800 bg-black rounded-xl md:rounded-lg py-1 md:py-2 px-2 text-lg md:text-xl mr-2 cursor-pointer hover:text-gray-400 hover:bg-black duration-300'>
+                <a href={project.url} target='_blank' rel='noreferrer noopener' className='text-[var(--secondary-text-color)] md:bg-[var(--secondary-bg-color)] bg-[var(--secondary-bg-color)] rounded-xl md:rounded-lg py-1 md:py-2 px-2 text-lg md:text-xl mr-2 cursor-pointer hover:text-[var(--text-color)] duration-300'>
                   <i className="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
               </div>

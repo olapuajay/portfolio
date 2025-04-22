@@ -8,7 +8,6 @@ const About = () => {
     'Pursuing a Bachelor’s degree in CSE',
     'Currently learning backend technologies with javascript',
     'Experience with version control systems like Git',
-    'Passionate about learning new technologies and frameworks',
     'Enthusiastic about creating seamless user experiences',
   ]
   
@@ -39,7 +38,7 @@ const About = () => {
           <p className="text-[var(--secondary-text-color)] text-sm md:text-lg mt-2" data-aos="fade-left">
             I thrive on learning and experimenting with new technologies, always staying up to date with the latest industry trends. I believe in clean, readable, and maintainable code that enhances user experience and performance. Whether it’s bringing a Figma design to life, optimizing a website for accessibility, or implementing smooth animations, I’m always up for the challenge.
           </p>
-          <p className="text-[--secondary-text-color] text-sm md:text-lg mt-2" data-aos="fade-up">Some quick bits about me:</p>
+          <p className="text-[--secondary-text-color] text-sm md:text-lg mt-2" data-aos="fade-up">Few quick bits about me:</p>
           <ul className="list-disc list-inside text-[var(--secondary-text-color)] mt-2">
             {quickBits.map(bit => (
               <li key={bit} className="mb-2 md:text-lg text-sm" data-aos="fade-up">{bit}</li>

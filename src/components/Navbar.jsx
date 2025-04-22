@@ -7,13 +7,15 @@ const Navbar = () => {
   const [showNavbar, setShowNavBar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const navRef = useRef(null);
+  const toggleButtonRef = useRef(null);
+
 
   const handleNav = () => {
     setNav(!nav);
   };
 
   const handleClickOutside = (e) => {
-    if(navRef.current && !navRef.current.contains(e.target)) {
+    if(navRef.current && !navRef.current.contains(e.target) && toggleButtonRef.current && !toggleButtonRef.current.contains(e.target)) {
       setNav(false);
     }
   };
@@ -68,7 +70,7 @@ const Navbar = () => {
       </a>
 
       {/* Mobile Navigation Icon */}
-      <div onClick={handleNav} className='block md:hidden text-[var(--secondary-text-color)]'>
+      <div ref={toggleButtonRef} onClick={handleNav} className='block md:hidden text-[var(--secondary-text-color)]'>
         {nav ? <i className='fas fa-times text-xl'></i> : <i className='fas fa-bars text-xl'></i>}
       </div>
 
