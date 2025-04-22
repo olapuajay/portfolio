@@ -38,9 +38,6 @@ function Contact({email, socialLinks}) {
             <a href={socialLinks.find(link => link.name === 'figma').url} target='_blank' rel='noreferrer noopener'>
               <i className='fab fa-figma text-3xl lg:text-[var(--secondary-text-color)] text-red-800 hover:text-red-600 hover:scale-110 duration-300 cursor-pointer'></i>
             </a>
-            <a href={socialLinks.find(link => link.name === 'twitter').url} target='_blank' rel='noreferrer noopener'>
-              <i className='fab fa-twitter text-3xl lg:text-[var(--secondary-text-color)] text-[#1DA1F2] hover:text-[#1DA1F2] hover:scale-110 duration-300 cursor-pointer'></i>
-            </a>
           </div>
         </div>
       </div>

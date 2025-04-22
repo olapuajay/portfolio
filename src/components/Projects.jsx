@@ -46,7 +46,7 @@ function Projects() {
   return (
     <section id='projects' className='w-full py-5 px-4 bg-[var(--secondary-bg-color)]' data-aos="fade-in">
       <h2 className="text-xl md:text-3xl font-bold text-center md:mb-4 mb-2 text-[var(--text-color)]" data-as="fade-down">My Projects</h2>
-      <p className='text-[var(--secondary-text-color)] text-center text-sm md:text-lg' data-aos="fade-up">Here are some of the projects I've worked on recently.</p>
+      <p className='text-[var(--secondary-text-color)] text-center text-sm md:text-lg' data-aos="fade-up"></p>
       <div>
         {projectList.slice().reverse().map(project => (
           <div key={project.name} className='flex flex-col lg:flex-row justify-center items-center my-4 bg-[var(--background-color)] px-2 py-0 rounded-lg shadow-lg' data-aos="fade-up">

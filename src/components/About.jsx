@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import aboutImg from '../assets/about-img.jpeg'
+// import aboutImg from '../assets/about-img.jpeg'
+import aboutImg from '../assets/about_image.jpg'
 
 const About = () => {
   const [isImgLoaded, setIsImgLoaded] = useState(false)

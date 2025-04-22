@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import resume from '../assets/resume.pdf';
 import ThemeToggle from './ThemeToggle';
-import { TbLayoutNavbarExpandFilled } from 'react-icons/tb';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
