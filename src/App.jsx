@@ -11,7 +11,7 @@ import Skills from './components/Skills'
 function App() {
   const [isPageLoaded, setIsPageLoaded] = useState(false)
   const siteProps = {
-    name: 'Ajay',
+    name: 'Olapu Ajay',
     description: 'I\'m a Web Developer specializing in JavaScript with a passion for building intuitive, responsive, and visually engaging web experiences. I focus on crafting seamless UI/UX designs that are fast, accessible, and user-friendly.',
     email: 'olapuajay@gmail.com',
     location: 'Peddapalli, India',
