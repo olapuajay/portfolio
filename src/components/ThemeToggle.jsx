@@ -31,7 +31,7 @@ function ThemeToggle() {
       </button>
 
       {toggletip && (
-        <p className='absolute top-full mt-2 px-2 py-1 text-sm text-white bg-gray-500 rounded-md z-10 w-26 text-center'>
+        <p className='absolute top-full mt-2 px-2 py-1 text-sm text-white bg-gray-500 rounded-md z-10 w-26 text-center hidden md:block'>
           Switch Theme
         </p>
       )}
