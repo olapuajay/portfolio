@@ -25,18 +25,18 @@ function Contact({email, socialLinks}) {
           <p className='text-[var(--secondary-text-color)] text-center text-sm md:text-lg mt-2' data-aos="fade-up">
             You can also find me on these platforms
           </p>
-          <div className='flex justify-center items-center gap-4 mt-4 md:mt-6'>
+          <div className='flex justify-center items-center gap-4 mt-2 md:mt-4'>
             <a href={socialLinks.find(link => link.name === 'github').url} target='_blank' rel='noreferrer noopener'>
-              <i className='fab fa-github text-3xl lg:text-[var(--secondary-text-color)] text-[var(--text-color)] hover:text-[var(--hover-color)] hover:scale-110 duration-300 cursor-pointer'></i>
+              <i className='fab fa-github md:text-3xl text-2xl lg:text-[var(--secondary-text-color)] text-[var(--text-color)] hover:text-[var(--hover-color)] hover:scale-110 duration-300 cursor-pointer'></i>
             </a>
             <a href={socialLinks.find(link => link.name === 'linkedin').url} target='_blank' rel='noreferrer noopener'>
-              <i className='fab fa-linkedin text-3xl lg:text-[var(--secondary-text-color)] text-[#0A66C2] hover:text-[#0A66C2] hover:scale-110 duration-300 cursor-pointer'></i>
+              <i className='fab fa-linkedin md:text-3xl text-2xl lg:text-[var(--secondary-text-color)] text-[#0A66C2] hover:text-[#0A66C2] hover:scale-110 duration-300 cursor-pointer'></i>
             </a>
             <a href={socialLinks.find(link => link.name === 'leetcode').url} target='_blank' rel='noreferrer noopener'>
-              <i className='fas fa-code text-3xl lg:text-[var(--secondary-text-color)] text-[#F89F1B] hover:text-[#F89F1B] hover:scale-110 duration-300 cursor-pointer'></i>
+              <i className='fas fa-code md:text-3xl text-2xl lg:text-[var(--secondary-text-color)] text-[#F89F1B] hover:text-[#F89F1B] hover:scale-110 duration-300 cursor-pointer'></i>
             </a>
             <a href={socialLinks.find(link => link.name === 'figma').url} target='_blank' rel='noreferrer noopener'>
-              <i className='fab fa-figma text-3xl lg:text-[var(--secondary-text-color)] text-red-800 hover:text-red-600 hover:scale-110 duration-300 cursor-pointer'></i>
+              <i className='fab fa-figma md:text-3xl text-2xl lg:text-[var(--secondary-text-color)] text-red-800 hover:text-red-600 hover:scale-110 duration-300 cursor-pointer'></i>
             </a>
           </div>
         </div>

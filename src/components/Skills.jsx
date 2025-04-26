@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {  motion} from 'framer-motion'
 import javascript from '../assets/skills/javascript.png'
 import react from '../assets/skills/react.png'
 import nodejs from '../assets/skills/nodejs.png'
@@ -32,11 +33,37 @@ function Skills() {
             {!isLoaded && (
               <div className='w-14 h-14 md:w-25 md:h-25 bg-gray-700 animate-pulse rounded-lg'></div>
             )}
-            <img src={skill.image} alt={`Image of ${skill.name}`} className={`${isLoaded ? 'block' : 'hidden'} w-14 h-14 md:w-25 md:h-25 object-contain hover:scale-110 duration-300 cursor-pointer`} onLoad={() => setIsLoaded(true)} onContextMenu={(e) => e.preventDefault()} draggable="false" />
+            <motion.img
+              src={skill.image}
+              alt={`Image of ${skill.name}`} 
+              className={`${isLoaded ? 'block' : 'hidden'} w-14 h-14 md:w-25 md:h-25 object-contain hover:scale-110 duration-300 cursor-pointer`} 
+              onLoad={() => setIsLoaded(true)} 
+              onContextMenu={(e) => e.preventDefault()} 
+              draggable="false"
+              animate={{
+                y: [0, -10, 0],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: 'easeInOut',
+              }}
+            />
             {!isLoaded && (
               <div className='w-36 h-6 bg-gray-700 animate-pulse rounded-lg'></div>
             )}
-            <p className={`${isLoaded ? 'block' : 'hidden'} text-[var(--secondary-text-color)] text-sm md:text-lg mt-2`} onLoad={() => setIsLoaded(true)}>{skill.name}</p>
+            <motion.div
+              animate={{
+                y: [0, -10, 0],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: 'easeInOut',
+              }}
+            >
+              <p className={`${isLoaded ? 'block' : 'hidden'} text-[var(--secondary-text-color)] text-sm md:text-lg mt-2`} onLoad={() => setIsLoaded(true)}>{skill.name}</p>
+            </motion.div>
           </div>
         ))}
       </div>
