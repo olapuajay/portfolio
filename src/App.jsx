@@ -12,6 +12,7 @@ function App() {
   const [isPageLoaded, setIsPageLoaded] = useState(false)
   const siteProps = {
     name: 'Olapu Ajay',
+    designation: 'Full-Stack Web Developer',
     description: 'I\'m a Web Developer specializing in JavaScript with a passion for building intuitive, responsive, and visually engaging web experiences. I focus on crafting seamless UI/UX designs that are fast, accessible, and user-friendly.',
     email: 'olapuajay@gmail.com',
     location: 'Peddapalli, India',
@@ -47,7 +48,7 @@ function App() {
       <div className={`${isPageLoaded ? 'block' : 'hidden'}`} onLoad={() => setIsPageLoaded(true)}>
         <Navbar />
         <Sidebar email={siteProps.email} socialLinks={siteProps.socialLinks} />
-        <Home name={siteProps.name} description={siteProps.description} location={siteProps.location} />
+        <Home name={siteProps.name} designation={siteProps.designation} description={siteProps.description} location={siteProps.location} />
         <About />
         <Skills />
         <Projects />
