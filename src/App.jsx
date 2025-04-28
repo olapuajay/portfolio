@@ -8,6 +8,7 @@ import Projects from './components/Projects'
 import Sidebar from './components/Sidebar'
 import Skills from './components/Skills'
 import Certifications from './components/Certifications'
+import Education from './components/Education'
 
 function App() {
   const [isPageLoaded, setIsPageLoaded] = useState(false)
@@ -54,6 +55,7 @@ function App() {
         <Skills />
         <Projects />
         <Certifications />
+        <Education />
         <Contact email={siteProps.email} socialLinks={siteProps.socialLinks} />
         <Footer name={siteProps.name} />
       </div>

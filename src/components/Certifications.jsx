@@ -39,7 +39,6 @@ function Certifications() {
       </h2>
       
       <div className="relative w-full max-w-4xl">
-        {/* Timeline line */}
         <div className="hidden md:block absolute left-1/2 h-full w-1 bg-gray-300 transform -translate-x-1/2"></div>
         
         <div className="space-y-8 md:space-y-0">
@@ -49,9 +48,7 @@ function Certifications() {
               className={`relative flex flex-col md:flex-row items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
               data-aos={`fade-${index % 2 === 0 ? 'left' : 'right'}`}
             >
-              {/* Timeline dot */}
               <div className="hidden md:block absolute left-1/2 top-0 h-5 w-5 mt-14 rounded-full bg-gray-300 transform -translate-x-1/2 hover:scale-110 duration-300"></div>              
-              {/* Certificate card */}
               <div className={`w-full md:w-5/12 p-4 rounded-lg shadow-lg bg-[var(--secondary-bg-color)] hover:scale-105 transition-transform duration-300 ${index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'}`}>
                 <div className="flex flex-col h-full">
                   <h3 className="text-lg font-semibold text-[var(--text-color)] mb-1">{certificate.name}</h3>
