@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import Profile_sm from '../assets/portfolio-profile.png'
 import Profile from '../assets/pf_profile.png'
-import { MapPin, MoveRight } from 'lucide-react'
+import { MapPin } from 'lucide-react'
 
 function Home({ name, designation, description, location }) {
   const [isProfileLoaded, setIsProfileLoaded] = useState(false)
@@ -40,7 +40,6 @@ function Home({ name, designation, description, location }) {
         {!isProfileLoaded && (
           <div className='w-40 h-40 md:w-56 md:h-56 bg-gray-700 animate-pulse rounded-full'></div>
         )}
-
         <motion.img
           src={Profile}
           alt="Profile Image"
@@ -64,16 +63,18 @@ function Home({ name, designation, description, location }) {
           }}
         />
         <motion.div 
-          className='absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-[#6366F1] text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg md:block hidden w-40 text-center'
+          className='absolute md:-bottom-4 -bottom-2 left-1/2 transform -translate-x-1/2 bg-[#6366F1] text-white px-6 py-2 rounded-full text-sm font-medium shadow-lg backdrop-blur-sm hidden md:block'
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          <span className='relative inline-flex items-center'>
-            <p className='bg-green-500 rounded-full h-2 w-2 inline-block mr-1 absolute'></p>
-            <p className='bg-green-400 rounded-full h-2 w-2 inline-block mr-1 animate-ping'></p>
-          </span>
-          Available for work
+          <div className='flex items-center gap-2'>
+            <span className='relative flex h-3 w-3'>
+              <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75'></span>
+              <span className='relative inline-flex rounded-full h-3 w-3 bg-green-500'></span>
+            </span>
+            <span>Available for work</span>
+          </div>
         </motion.div>
 
         <motion.img 

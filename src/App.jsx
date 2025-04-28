@@ -7,6 +7,7 @@ import Navbar from './components/Navbar'
 import Projects from './components/Projects'
 import Sidebar from './components/Sidebar'
 import Skills from './components/Skills'
+import Certifications from './components/Certifications'
 
 function App() {
   const [isPageLoaded, setIsPageLoaded] = useState(false)
@@ -52,6 +53,7 @@ function App() {
         <About />
         <Skills />
         <Projects />
+        <Certifications />
         <Contact email={siteProps.email} socialLinks={siteProps.socialLinks} />
         <Footer name={siteProps.name} />
       </div>
