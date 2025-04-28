@@ -52,7 +52,7 @@ const Navbar = () => {
     <div className={`md:bg-transparent bg-[var(--background-color)] md:backdrop-blur-2xl flex justify-between items-center md:h-16 w-full h-14 fixed top-0 left-0 z-50 px-4 text-white transition-transform duration-300 ${showNavbar ? 'md:translate-y-0' : 'md:-translate-y-full'}`}>
       {/* Logo */}
       <h1 className='w-full md:text-3xl text-2xl font-bold text-[#6366F1]'> 
-        <a href="#home" className='cursor-pointer'> {"<A />"} </a>
+        <a href="#home" className='cursor-pointer font-mono tracking-tighter'> {"<A />"} </a>
       </h1>
 
       {/* Desktop Navigation */}
@@ -65,7 +65,7 @@ const Navbar = () => {
       </ul>
       <div className='line h-6 w-0.5 rounded-3xl bg-[#9CA3AF] mx-2 hidden md:flex'></div>
       <ThemeToggle />
-      <a href={resume} target='_blank' rel='noopener noreferrer' className='bg-[#6366F1] py-2 px-4 rounded-xl text-[var(--text-color)] text-center font-semibold hover:bg-[#637bf1] duration-300 min-w-35 cursor-pointer hidden md:flex'>
+      <a href={resume} target='_blank' rel='noopener noreferrer' className='bg-[#6366F1] py-2 px-4 rounded-xl text-[var(--text-color)] text-center font-normal hover:bg-[#637bf1] duration-300 min-w-34 cursor-pointer hidden md:flex'>
         Download CV
       </a>
 
@@ -84,9 +84,9 @@ const Navbar = () => {
         }
       >
         {/* Mobile Logo */}
-        <h1 className='w-full text-2xl font-bold text-[#6366F1] m-4'> 
+        <h1 className='w-full text-2xl font-bold text-[#6366F1] m-4 font-mono tracking-tighter'> 
           <a href="#home" onClick={() => setNav(false)}>
-            {"<A />"} 
+            {"<A />"}
           </a>
         </h1>
 
@@ -97,7 +97,7 @@ const Navbar = () => {
           </li>
         ))}
         <div className='flex flex-col justify-center items-center'>
-          <a href={resume} target='_blank' rel='noopener noreferrer' onClick={() => setNav(false)} className='bg-[#6366F1] py-2 px-4 my-2 mx-3.5 rounded-xl font-bold text-white w-40 cursor-pointer'>
+          <a href={resume} target='_blank' rel='noopener noreferrer' onClick={() => setNav(false)} className='bg-[#6366F1] py-2 px-4 my-2 mx-3.5 rounded-xl font-normal text-white w-40 cursor-pointer'>
             Download CV 
           </a>
         </div>

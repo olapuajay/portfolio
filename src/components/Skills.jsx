@@ -1,74 +1,135 @@
-import React, {useState} from 'react'
-import {  motion} from 'framer-motion'
-import javascript from '../assets/skills/javascript.png'
-import react from '../assets/skills/react.png'
-import nodejs from '../assets/skills/nodejs.png'
-import tailwindcss from '../assets/skills/tailwind.png'
-import bootstrap from '../assets/skills/bootstrap-framework.png'
-import html from '../assets/skills/html.png'
-import css from '../assets/skills/css.png'
-import git from '../assets/skills/git.png'
-import figma from '../assets/skills/figma.png'
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Palette, GitBranch, Database } from 'lucide-react';
+
+import javascript from '../assets/skills/javascript.png';
+import react from '../assets/skills/react.png';
+import nodejs from '../assets/skills/nodejs.png';
+import tailwindcss from '../assets/skills/tailwind.png';
+import bootstrap from '../assets/skills/bootstrap-framework.png';
+import html from '../assets/skills/html.png';
+import css from '../assets/skills/css.png';
+import git from '../assets/skills/git.png';
+import figma from '../assets/skills/figma.png';
+
+const skillCategories = [
+  {
+    title: "Frontend",
+    icon: <Palette className="w-5 h-5" />,
+    skills: [
+      { name: 'HTML', image: html },
+      { name: 'CSS', image: css },
+      { name: 'JavaScript', image: javascript },
+      { name: 'React', image: react },
+      { name: 'Tailwind CSS', image: tailwindcss },
+      { name: 'Bootstrap', image: bootstrap },
+    ]
+  },
+  {
+    title: "Backend",
+    icon: <Database className="w-5 h-5" />,
+    skills: [
+      { name: 'Node.js', image: nodejs },
+    ]
+  },
+  {
+    title: "Tools",
+    icon: <GitBranch className="w-5 h-5" />,
+    skills: [
+      { name: 'Git', image: git },
+      { name: 'Figma', image: figma },
+    ]
+  }
+];
 
 function Skills() {
-  const [isLoaded, setIsLoaded] = useState(false)
-  const Skills = [
-    {name: 'Javascript', image: javascript},
-    {name: 'React', image: react},
-    {name: 'Node.js', image: nodejs},
-    {name: 'Tailwind CSS', image: tailwindcss},
-    {name: 'Bootstrap', image: bootstrap},
-    {name: 'HTML', image: html},
-    {name: 'CSS', image: css},
-    {name: 'Git', image: git},
-    {name: 'Figma', image: figma},
-  ]
+  const [hoveredSkill, setHoveredSkill] = useState(null);
+
   return (
-    <section id='skills' className='text-center w-full py-5 px-4' data-aos="fade-in">
-      <h2 className="text-xl md:text-3xl font-bold text-center text-[var(--text-color)] md:mb-4 mb-2 " data-aos="fade-down">Skills & Expertise</h2>
-      <p className='text-[var(--secondary-text-color)] text-sm md:text-lg' data-aos="fade-up"></p>
-      <div className='grid grid-cols-3 gap-4 md:grid-cols-6 md:gap-6 w-full px-4 py-6 '>
-        {Skills.map(skill => (
-          <div key={skill.name} className='flex flex-col items-center' data-aos="zoom-in">
-            {!isLoaded && (
-              <div className='w-14 h-14 md:w-25 md:h-25 bg-gray-700 animate-pulse rounded-lg'></div>
-            )}
-            <motion.img
-              src={skill.image}
-              alt={`Image of ${skill.name}`} 
-              className={`${isLoaded ? 'block' : 'hidden'} w-14 h-14 md:w-25 md:h-25 object-contain hover:scale-110 duration-300 cursor-pointer`} 
-              onLoad={() => setIsLoaded(true)} 
-              onContextMenu={(e) => e.preventDefault()} 
-              draggable="false"
-              animate={{
-                y: [0, -10, 0],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
-            />
-            {!isLoaded && (
-              <div className='w-36 h-6 bg-gray-700 animate-pulse rounded-lg'></div>
-            )}
+    <section id='skills' className='w-full py-5 px-4 sm:px-6 lg:px-8'>
+      <div className='max-w-7xl mx-auto'>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className='text-center mb-12'
+        >
+          <h2 className="text-3xl font-bold text-[var(--text-color)] mb-3">Skills & Expertise</h2>
+          <p className='text-[var(--secondary-text-color)] max-w-2xl mx-auto'>
+            Technologies and tools I work with to create exceptional digital experiences
+          </p>
+        </motion.div>
+
+        <div className='space-y-12'>
+          {skillCategories.map((category, index) => (
             <motion.div
-              animate={{
-                y: [0, -10, 0],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
             >
-              <p className={`${isLoaded ? 'block' : 'hidden'} text-[var(--secondary-text-color)] text-sm md:text-lg mt-2`} onLoad={() => setIsLoaded(true)}>{skill.name}</p>
+              <div className='flex items-center mb-6'>
+                <div className='mr-3 p-2 rounded-lg bg-indigo-100 dark:bg-indigo-900/50 text-[#6366F1] dark:text-indigo-300'>
+                  {category.icon}
+                </div>
+                <h3 className='text-xl font-semibold text-[var(--text-color)]'>{category.title}</h3>
+              </div>
+
+              <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4'>
+                {category.skills.map((skill) => (
+                  <motion.div
+                    key={skill.name}
+                    whileHover={{ y: -5 }}
+                    onHoverStart={() => setHoveredSkill(skill.name)}
+                    onHoverEnd={() => setHoveredSkill(null)}
+                    className='relative'
+                  >
+                    <div className={`p-4 rounded-xl bg-[var(--card-bg-color)] border border-[var(--card-border-color)] transition-all duration-300 ${hoveredSkill === skill.name ? 'shadow-lg' : 'shadow-md'}`}>
+                      <div className='flex flex-col items-center'>
+                        <div className='w-16 h-16 flex items-center justify-center mb-3'>
+                          <motion.img
+                            src={skill.image}
+                            alt={skill.name}
+                            className='w-12 h-12 object-contain'
+                            whileHover={{ scale: 1.1 }}
+                            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                          />
+                        </div>
+                        <p className='text-sm font-medium text-[var(--text-color)] text-center'>{skill.name}</p>
+                      </div>
+                    </div>
+                    {hoveredSkill === skill.name && (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        className='absolute -bottom-8 left-0 right-0 text-center text-xs text-indigo-500 font-medium'
+                      >
+                        {skill.name}
+                      </motion.div>
+                    )}
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
-          </div>
-        ))}
+          ))}
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.8 }}
+          viewport={{ once: true }}
+          className='mt-16 text-center'
+        >
+          <p className='text-[var(--secondary-text-color)] italic'>
+            Continuously learning and expanding my skill set
+          </p>
+        </motion.div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Skills
+export default Skills;

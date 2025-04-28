@@ -26,7 +26,7 @@ function ThemeToggle() {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <button onClick={toggleTheme} className='p-1.5 rounded-lg text-xl mr-2 text-[var(--secondary-text-color)] hover:bg-[#9CA3AF] hover:text-[var(--text-color)] duration-300 cursor-pointer'>
+      <button onClick={toggleTheme} className='p-1.5 rounded-full text-xl mr-2 text-[var(--secondary-text-color)] hover:bg-[#9CA3AF] hover:text-[var(--text-color)] duration-300 cursor-pointer'>
         {isDarkmode ? <SunIcon /> : <MoonIcon />} 
       </button>
 
