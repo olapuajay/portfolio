@@ -70,7 +70,7 @@ function Contact({ email, socialLinks }) {
               className='p-6 bg-[var(--card-bg-color)] rounded-xl shadow-md hover:shadow-lg transition-all'
             >
               <div className='flex flex-col items-center text-center'>
-                <div className='mb-4 p-3 bg-indigo-100 dark:bg-indigo-900/30 rounded-full'>
+                <div className='mb-2 p-3 bg-indigo-100 dark:bg-indigo-900/30 rounded-full'>
                   <Mail className='w-8 h-8 text-indigo-600 dark:text-indigo-400' />
                 </div>
                 <h3 className='text-xl font-semibold text-[var(--text-color)] mb-2'>Email Me</h3>

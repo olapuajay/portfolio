@@ -11,6 +11,11 @@ import html from '../assets/skills/html.png';
 import css from '../assets/skills/css.png';
 import git from '../assets/skills/git.png';
 import figma from '../assets/skills/figma.png';
+import expressjs from '../assets/skills/expressjs.png';
+import mongodb from '../assets/skills/mongodb.png';
+import postman from '../assets/skills/postman.png';
+import api from '../assets/skills/api.png'
+import responsivewebdesign from '../assets/skills/responsivedesign.png'
 
 const skillCategories = [
   {
@@ -23,6 +28,7 @@ const skillCategories = [
       { name: 'React', image: react },
       { name: 'Tailwind CSS', image: tailwindcss },
       { name: 'Bootstrap', image: bootstrap },
+      { name: 'Responsive Design', image: responsivewebdesign }
     ]
   },
   {
@@ -30,6 +36,9 @@ const skillCategories = [
     icon: <Database className="w-5 h-5" />,
     skills: [
       { name: 'Node.js', image: nodejs },
+      { name:  'Express.js', image: expressjs},
+      { name: 'MongoDB', image: mongodb },
+      { name: 'RestAPI', image: api },
     ]
   },
   {
@@ -37,6 +46,7 @@ const skillCategories = [
     icon: <GitBranch className="w-5 h-5" />,
     skills: [
       { name: 'Git', image: git },
+      { name: 'Postman', image: postman },
       { name: 'Figma', image: figma },
     ]
   }

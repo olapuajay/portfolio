@@ -17,6 +17,16 @@ import project3Img_3 from '../assets/projects/project3_3.png'
 import project3Img_4 from '../assets/projects/project3_4.png'
 import project3Img_5 from '../assets/projects/project3_5.png'
 import project3Img_6 from '../assets/projects/project3_6.png'
+import project4Img_1 from '../assets/projects/project4_1.png'
+import project4Img_2 from '../assets/projects/project4_2.png'
+import project4Img_3 from '../assets/projects/project4_3.png'
+import project4Img_4 from '../assets/projects/project4_4.png'
+import project4Img_5 from '../assets/projects/project4_5.png'
+import project4Img_6 from '../assets/projects/project4_6.png'
+import project4Img_7 from '../assets/projects/project4_7.png'
+import project4Img_8 from '../assets/projects/project4_8.png'
+import project4Img_9 from '../assets/projects/project4_9.png'
+import project4Img_10 from '../assets/projects/project4_10.png'
 import ProjectCarousel from './ProjectCarousel'
 
 function Projects() {
@@ -42,6 +52,13 @@ function Projects() {
       images: [project3Img_1, project3Img_2, project3Img_3, project3Img_4, project3Img_5, project3Img_6],
       url: 'https://filmvault-vite.netlify.app/',
     },
+    {
+      name: 'Pure Harvest',
+      description: 'Developed a full-stack e-commerce platform connecting farmers and users directly. Features include user authentication, role-based dashboards (User/Farmer/Admin), product uploads with image hosting, cart management, order placement with Razorpay simulation, and order tracking in user profile. APIs tested with Postman and styled using Tailwind CSS.',
+      techstack: ['MERN Stack', 'JWT Auth', 'Cloudinary', 'Tailwind CSS', 'Postman'],
+      images: [project4Img_1, project4Img_2, project4Img_3, project4Img_4, project4Img_5, project4Img_6, project4Img_7, project4Img_8, project4Img_9, project4Img_10],
+      url: 'https://pureharvest-mern.vercel.app/',
+    }
   ]
   return (
     <section id='projects' className='w-full py-5 px-4 bg-[var(--secondary-bg-color)]' data-aos="fade-in">
