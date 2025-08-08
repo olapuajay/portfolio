@@ -30,6 +30,13 @@ function Certifications() {
       url: 'https://www.scaler.com/topics/course/free-react-js-course/',
       date: 'Dec 24'
     },
+    {
+      id: '5',
+      name: 'Project Management: Foundations and Initiation',
+      platform: 'University of Colorado Boulder',
+      url: 'https://www.coursera.org/learn/project-management-foundations-initiation',
+      date: 'Aug 25'
+    },
   ];
 
   return (

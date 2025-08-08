@@ -31,7 +31,7 @@ function Home({ name, designation, description, location }) {
           <button className='bg-[#6366F1] py-2 px-4 rounded-lg text-white text-center font-normal hover:bg-[#637bf1] duration-300 md:text-lg text-sm cursor-pointer'>
             <a href="#skills">View Skills</a>
           </button>
-          <button className='py-2 px-4 rounded-lg text-[#6366F1] border-1 text-center font-normal hover:bg-[#637bf1] hover:text-white hover:border-0 duration-300 min-w-30 md:text-lg text-sm cursor-pointer'>
+          <button className='py-2 px-4 rounded-lg text-[#6366F1] border-1 border-[#6366F1] text-center font-normal hover:bg-[#637bf1] hover:text-white duration-300 min-w-30 md:text-lg text-sm cursor-pointer'>
             <a href="#contact">Contact Me</a>
           </button>
         </div>

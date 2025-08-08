@@ -15,7 +15,7 @@ function App() {
   const siteProps = {
     name: 'Olapu Ajay',
     designation: 'Full-Stack Web Developer',
-    description: 'I\'m a Web Developer specializing in JavaScript with a passion for building intuitive, responsive, and visually engaging web experiences. I focus on crafting seamless UI/UX designs that are fast, accessible, and user-friendly.',
+    description: 'Hi, I\'m a Web Developer specializing in JavaScript and the MERN stack. I’m passionate about building intuitive, responsive, and visually engaging web experiences. I focus on crafting seamless UI/UX designs that are fast, accessible, and user-friendly.',
     email: 'olapuajay@gmail.com',
     location: 'Peddapalli, India',
     socialLinks: [
