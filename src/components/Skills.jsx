@@ -16,6 +16,7 @@ import mongodb from '../assets/skills/mongodb.png';
 import postman from '../assets/skills/postman.png';
 import api from '../assets/skills/api.png'
 import responsivewebdesign from '../assets/skills/responsivedesign.png'
+import notion from '../assets/skills/notion.png'
 
 const skillCategories = [
   {
@@ -47,6 +48,7 @@ const skillCategories = [
     skills: [
       { name: 'Git', image: git },
       { name: 'Postman', image: postman },
+      { name: 'Notion', image: notion },
       { name: 'Figma', image: figma },
     ]
   }
