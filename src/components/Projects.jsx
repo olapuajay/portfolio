@@ -27,6 +27,14 @@ import project4Img_7 from '../assets/projects/project4_7.png'
 import project4Img_8 from '../assets/projects/project4_8.png'
 import project4Img_9 from '../assets/projects/project4_9.png'
 import project4Img_10 from '../assets/projects/project4_10.png'
+import project5Img_1 from '../assets/projects/project5_1.png'
+import project5Img_2 from '../assets/projects/project5_2.png'
+import project5Img_3 from '../assets/projects/project5_3.png'
+import project5Img_4 from '../assets/projects/project5_4.png'
+import project5Img_5 from '../assets/projects/project5_5.png'
+import project5Img_6 from '../assets/projects/project5_6.png'
+import project5Img_7 from '../assets/projects/project5_7.png'
+import project5Img_8 from '../assets/projects/project5_8.png'
 import ProjectCarousel from './ProjectCarousel'
 
 function Projects() {
@@ -58,6 +66,13 @@ function Projects() {
       techstack: ['MERN Stack', 'JWT Auth', 'Cloudinary', 'Tailwind CSS', 'Postman'],
       images: [project4Img_1, project4Img_2, project4Img_3, project4Img_4, project4Img_5, project4Img_6, project4Img_7, project4Img_8, project4Img_9, project4Img_10],
       url: 'https://pureharvest-mern.vercel.app/',
+    },
+    {
+      name: 'FinSight',
+      description: 'Built a full-stack personal finance management platform to help users track expenses, set budgets, and gain actionable AI-powered insights into their spending behavior. Designed with real-time notifications, daily reminders, and intelligent reporting for smarter financial decisions.',
+      techstack: ['MERN Stack', 'Redux', 'Socket.io', 'Gemini API', 'Recharts', 'JWT Auth'],
+      images: [project5Img_1, project5Img_2, project5Img_3, project5Img_4, project5Img_5, project5Img_6, project5Img_7, project5Img_8],
+      url: 'https://finsight-et.netlify.app/',
     }
   ]
   return (

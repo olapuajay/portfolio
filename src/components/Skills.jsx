@@ -17,6 +17,9 @@ import postman from '../assets/skills/postman.png';
 import api from '../assets/skills/api.png'
 import responsivewebdesign from '../assets/skills/responsivedesign.png'
 import notion from '../assets/skills/notion.png'
+import redux from "../assets/skills/redux.png";
+import socketio from "../assets/skills/socketio.png";
+import sql from "../assets/skills/sql.png";
 
 const skillCategories = [
   {
@@ -26,7 +29,8 @@ const skillCategories = [
       { name: 'HTML', image: html },
       { name: 'CSS', image: css },
       { name: 'JavaScript', image: javascript },
-      { name: 'React', image: react },
+      { name: 'React JS', image: react },
+      { name: 'Redux', image: redux },
       { name: 'Tailwind CSS', image: tailwindcss },
       { name: 'Bootstrap', image: bootstrap },
       { name: 'Responsive Design', image: responsivewebdesign }
@@ -39,6 +43,8 @@ const skillCategories = [
       { name: 'Node.js', image: nodejs },
       { name:  'Express.js', image: expressjs},
       { name: 'MongoDB', image: mongodb },
+      { name: 'MySql', image: sql },
+      { name: 'Socket io', image: socketio },
       { name: 'RestAPI', image: api },
     ]
   },
